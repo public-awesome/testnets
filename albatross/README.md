@@ -63,7 +63,7 @@ Below are the instructions to generate & submit your genesis transaction
 4. Create the gentx
 
    ```shell
-   > staked gentx --amount 900000000uegg --name=<key-name>
+   > staked gentx <key-name> --amount=900000000uegg --chain-id=albatross-1
    ```
 
    If all goes well, you will see a message similar to the following:
@@ -103,7 +103,7 @@ Once after the genesis is released (i.e., _20-Oct-2020 1600UTC_), follow the ins
 Fetch `genesis.json` into `staked`'s `config` directory.
 
 ```sh
-> curl https://raw.githubusercontent.com/public-awesome/testnets/master/albtatross-1/genesis.json > $HOME/.staked/config/genesis.json
+> curl https://raw.githubusercontent.com/public-awesome/testnets/master/albatross-1/genesis.json > $HOME/.staked/config/genesis.json
 ```
 
 Add seed nodes in `config.toml`.
@@ -176,7 +176,7 @@ This section applies to those who are looking to join the testnet post genesis.
 1. Init Chain and start your node
 
    ```shell
-   > staked init <moniker-name> --chain-id=albtatross-1
+   > staked init <moniker-name> --chain-id=albatross-1
    ```
 
    After that, please follow all the instructions from [Start your validator node](#start-your-validator-node)
@@ -202,6 +202,6 @@ This section applies to those who are looking to join the testnet post genesis.
    --details "validators write bios too" \
    --pubkey=$(staked tendermint show-validator) \
    --moniker <your_moniker> \
-   --chain-id albtatross-1 \
+   --chain-id albatross-1 \
    --from <key-name>
    ```
