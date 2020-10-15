@@ -43,32 +43,32 @@ Below are the instructions to generate & submit your genesis transaction
 1. Initialize the Stakebird directories and create the local genesis file with the correct
    chain-id
 
-   ```shell
+   ```sh
    > staked init <moniker-name> --chain-id=albatross-1
    ```
 
 2. Create a local key pair
 
-   ```shell
+   ```sh
    > staked keys add <key-name>
    ```
 
 3. Add your account to your local genesis file with a given amount and the key you
    just created. Use only `1000000000uegg`, other amounts will be ignored.
 
-   ```shell
+   ```sh
    > staked add-genesis-account $(staked keys show <key-name> -a) 1000000000uegg
    ```
 
 4. Create the gentx
 
-   ```shell
+   ```she
    > staked gentx <key-name> --amount=900000000uegg --chain-id=albatross-1
    ```
 
    If all goes well, you will see a message similar to the following:
 
-    ```shell
+    ```sh
     Genesis transaction written to "/home/user/.staked/config/gentx/gentx-******.json"
     ```
 
@@ -109,7 +109,7 @@ Fetch `genesis.json` into `staked`'s `config` directory.
 Add seed nodes in `config.toml`.
 
 ```sh
-> nano $HOME/.staked/config/config.toml
+> vi $HOME/.staked/config/config.toml
 ```
 
 Find the following section and add the seed nodes.
@@ -128,11 +128,11 @@ persistent_peers = ""
 
 Create a `systemd` service
 
-```shell
-> sudo nano /lib/systemd/system/staked.service
+```sh
+> sudo vi /lib/systemd/system/staked.service
 ```
 
-Copy-Paste in the following and update `<your_username>` and `<go_workspace>` as required:
+Copy and paste the following and update `<your_username>` and `<go_workspace>`:
 
 ```sh
 [Unit]
@@ -150,7 +150,7 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 ```
 
-**This tutorial assumes `$HOME/go_workspace` to be your Go workspace. Your actual workspace directory may vary.**
+**This assumes `$HOME/go_workspace` to be your Go workspace. Your actual workspace directory may vary.**
 
 ```sh
 > sudo systemctl enable staked
@@ -166,7 +166,7 @@ Check node status
 Check logs
 
 ```sh
-> sudo journalctl -u staked -f
+> journalctl -u staked -f
 ```
 
 ## Create Testnet Validator
@@ -175,7 +175,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
 1. Init Chain and start your node
 
-   ```shell
+   ```sh
    > staked init <moniker-name> --chain-id=albatross-1
    ```
 
@@ -183,7 +183,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
 2. Create a local key pair
 
-   ```shell
+   ```sh
    > staked keys add <key-name>
    > staked keys show <key-name> -a
    ```
@@ -192,7 +192,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
 4. Create validator
 
-   ```shell
+   ```sh
    $ staked tx staking create-validator \
    --amount 900000000uegg \
    --commission-max-change-rate "0.1" \
