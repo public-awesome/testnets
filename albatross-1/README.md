@@ -63,7 +63,7 @@ Below are the instructions to generate & submit your genesis transaction
 
 4. Create the gentx
 
-   ```she
+   ```sh
    > staked gentx <key-name> --amount=900000000uegg --chain-id=albatross-1
    ```
 

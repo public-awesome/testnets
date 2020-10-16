@@ -31,8 +31,9 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 ```
 
-Verify go was installed and paths were set correctly
+Verify Go was installed and paths were set correctly
 
 ```bash
 > go version
+> echo $GOPATH
 ```
