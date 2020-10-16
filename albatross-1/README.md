@@ -121,7 +121,7 @@ seeds = ""
 
 ```sh
 # Comma separated list of persistent peers to connect to
-persistent_peers = ""
+persistent_peers = "a81c314a4619f85cccbb9bb69eeabd9d385bc82b@3.82.106.0:26656"
 ```
 
 #### Start Your Node
