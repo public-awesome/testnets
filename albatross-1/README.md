@@ -2,7 +2,8 @@
 
 ## Software Requirements
 
-- Go version v1.14.+
+- Go version v1.14+
+- [Ubuntu Setup Guide](./ubuntu.md)
 - Stakebird version : [v0.3.0](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0)
 
 ### Install Stakebird

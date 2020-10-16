@@ -1,6 +1,6 @@
-# Setup a Validator on Ubuntu
+# Ubuntu Setup
 
-## Install dependencies
+## Install build tools
 
 ```bash
 # update ubuntu
@@ -13,7 +13,7 @@
 > sudo apt-get install gcc
 ```
 
-### Install Go
+## Install Go
 
 ```bash
 > wget https://golang.org/dl/go1.15.3.linux-amd64.tar.gz
