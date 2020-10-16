@@ -24,12 +24,12 @@ To verify if the installation was successful, execute the following command:
 It will display the version of staked currently installed:
 
 ```sh
-name: Stakebird
+name: stakebird
 server_name: staked
 version: 0.3.0
-commit: [TODO]
+commit: 79e86d431c655831e236db68e7f6c62af1457b41
 build_tags: netgo,ledger
-go: go version go1.15.2 linux/amd64
+go: go version go1.15.3 linux/amd64
 ```
 
 ## Setup validator node
