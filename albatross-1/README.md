@@ -188,9 +188,7 @@ This section applies to those who are looking to join the testnet post genesis.
    > staked keys show <key-name> -a
    ```
 
-3. Request tokens from faucet: [TODO]
-
-4. Create validator
+3. Create validator
 
    ```sh
    $ staked tx staking create-validator \
@@ -205,3 +203,5 @@ This section applies to those who are looking to join the testnet post genesis.
    --chain-id albatross-1 \
    --from <key-name>
    ```
+
+4. Request tokens from the Discord [#validator](https://discord.gg/QeJWCrE) channel if you need more.
