@@ -1,12 +1,29 @@
 # Albatross Testnet Instructions
 
-## Software Requirements
+## Minimum hardware requirements
 
-- Go version v1.14+
+- 8GB RAM
+- 20GB free space
+
+## Software requirements
+
+Stakebird has releases for Linux and MacOS [here](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0).
+
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Stakebird version : [v0.3.0](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0)
+- Latest version : [v0.3.0](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0)
 
 ### Install Stakebird
+
+You can install Stakebird by downloading the binary (easiest), or compiling from source.
+
+#### Download binary
+
+1. Download the binary for your platform: [releases](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0).
+2. Copy it to a location in your $PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
+
+#### Build from source
+
+Requires [Go version v1.14+](https://golang.org/doc/install).
 
 ```sh
 > mkdir -p $GOPATH/src/github.com/public-awesome
@@ -15,6 +32,8 @@
 > git checkout v0.3.0
 > make install
 ```
+
+#### Verify installation
 
 To verify if the installation was successful, execute the following command:
 
@@ -99,7 +118,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
 
 Once after the genesis is released (i.e., _20-Oct-2020 1600UTC_), follow the instructions below to start your validator node.
 
-#### Genesis & Seeds
+#### Genesis & seeds
 
 Fetch `genesis.json` into `staked`'s `config` directory.
 
@@ -125,7 +144,7 @@ seeds = ""
 persistent_peers = "a81c314a4619f85cccbb9bb69eeabd9d385bc82b@3.82.106.0:26656"
 ```
 
-#### Start Your Node
+#### Start node
 
 Create a `systemd` service
 
@@ -170,7 +189,7 @@ Check logs
 > journalctl -u staked -f
 ```
 
-## Create Testnet Validator
+## Create testnet validator
 
 This section applies to those who are looking to join the testnet post genesis.
 
