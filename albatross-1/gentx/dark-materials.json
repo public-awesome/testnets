@@ -1,0 +1,58 @@
+{
+    "body": {
+        "messages": [
+            {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                    "moniker": "dark-materials",
+                    "identity": "",
+                    "website": "",
+                    "security_contact": "",
+                    "details": ""
+                },
+                "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "stb1m9kzq50zjwsz5krk7sevfnsdg6mh2e4y6xneqx",
+                "validator_address": "stbvaloper1m9kzq50zjwsz5krk7sevfnsdg6mh2e4yfkfjdu",
+                "pubkey": "stbvalconspub1zcjduepq8m4retpx24g2mrgf05qvhlxupzanhmdutgn45m97s5w3eun6z3vsxnq0wg",
+                "value": {
+                    "denom": "uegg",
+                    "amount": "900000000"
+                }
+            }
+        ],
+        "memo": "d5cf23af8050b450be13df2a8e956dda4ad1bb63@192.168.192.200:26656",
+        "timeout_height": "0",
+        "extension_options": [],
+        "non_critical_extension_options": []
+    },
+    "auth_info": {
+        "signer_infos": [
+            {
+                "public_key": {
+                    "@type": "/cosmos.crypto.secp256k1.PubKey",
+                    "key": "As1+kHj9csjSYlZGAjAEv7vajQxPLTc3Y4ySEd4y4X6B"
+                },
+                "mode_info": {
+                    "single": {
+                        "mode": "SIGN_MODE_DIRECT"
+                    }
+                },
+                "sequence": "0"
+            }
+        ],
+        "fee": {
+            "amount": [],
+            "gas_limit": "200000",
+            "payer": "",
+            "granter": ""
+        }
+    },
+    "signatures": [
+        "dWVt48dN6uH38q8jbLurMdXw+1ncNfwLvUXZLNj8sZxh40RDLDxok0T2GT8mJWVNZQ1CDhbtAyqB3qRyBkAQLA=="
+    ]
+}
