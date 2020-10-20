@@ -410,7 +410,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 100,
-        "bond_denom": "ustb"
+        "bond_denom": "uegg"
       },
       "last_total_power": "0",
       "last_validator_powers": [],
