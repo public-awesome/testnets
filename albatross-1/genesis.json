@@ -113,7 +113,7 @@
     },
     "crisis": {
       "constant_fee": {
-        "denom": "ustb",
+        "denom": "uegg",
         "amount": "1000"
       }
     },
@@ -130,7 +130,7 @@
         "creator_allocation": "0.050000000000000000",
         "reward_pool_curation_max_alloc": "0.001000000000000000",
         "initial_reward_pool": {
-          "denom": "ustb",
+          "denom": "uegg",
           "amount": "21000000000000"
         }
       }
@@ -344,7 +344,7 @@
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "ustb",
+            "denom": "uegg",
             "amount": "10000000"
           }
         ],
@@ -384,7 +384,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "ustb",
+        "mint_denom": "uegg",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -433,7 +433,7 @@
       "params": {
         "threshold_amount": [
           {
-            "denom": "ustb",
+            "denom": "uegg",
             "amount": "1000000"
           }
         ],
