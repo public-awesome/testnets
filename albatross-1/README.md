@@ -144,7 +144,7 @@ seeds = ""
 persistent_peers = "a81c314a4619f85cccbb9bb69eeabd9d385bc82b@3.82.106.0:26656"
 ```
 
-#### Start node
+#### Start node automatically (Linux only)
 
 Create a `systemd` service
 
@@ -196,7 +196,7 @@ This section applies to those who are looking to join the testnet post genesis.
 1. Init Chain and start your node
 
    ```sh
-   > staked init <moniker-name> --chain-id=albatross-1
+   > staked init <moniker-name> --chain-id=albatross-1 --stake-denom=uegg
    ```
 
    After that, please follow all the instructions from [Start your validator node](#start-your-validator-node)
