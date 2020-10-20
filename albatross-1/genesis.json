@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2020-10-20T02:20:00Z",
+  "genesis_time": "2020-10-20T22:00:00Z",
   "chain_id": "albatross-1",
   "initial_height": "1",
   "consensus_params": {
