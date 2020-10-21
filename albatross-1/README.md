@@ -74,7 +74,7 @@ Below are the instructions to generate & submit your genesis transaction
    ```
 
 3. Add your account to your local genesis file with a given amount and the key you
-   just created. Use only `1000000000uegg`, other amounts will be ignored.
+   just created. Use only `1000000000uegg`, other amounts will be ignored. EGG is testnet STB.
 
    ```sh
    > staked add-genesis-account $(staked keys show <key-name> -a) 1000000000uegg
@@ -142,6 +142,18 @@ seeds = ""
 ```sh
 # Comma separated list of persistent peers to connect to
 persistent_peers = "a81c314a4619f85cccbb9bb69eeabd9d385bc82b@3.82.106.0:26656"
+```
+
+#### Set validator gas fees
+
+You can set the minimum gas prices for transactions to be accepted into your node's mempool. This sets a lower bound on gas prices, preventing spam. Stakebird can accept gas in *any* currency. To accept both ATOM and EGG for example, set `minimum-gas-prices` in `app.toml`.
+
+```sh
+> vi $HOME/.staked/config/app.toml
+```
+
+```sh
+minimum-gas-prices = "0.025uatom,0.025uegg"
 ```
 
 #### Start node automatically (Linux only)
