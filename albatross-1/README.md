@@ -31,7 +31,7 @@ Requires [Go version v1.14+](https://golang.org/doc/install).
 > cd $GOPATH/src/github.com/public-awesome
 > git clone https://github.com/public-awesome/stakebird && cd stakebird
 > git checkout v0.3.0
-> make install
+> FAUCET_ENABLED=true make install
 ```
 
 #### Verify installation
@@ -49,13 +49,15 @@ name: stakebird
 server_name: staked
 version: 0.3.0
 commit: 79e86d431c655831e236db68e7f6c62af1457b41
-build_tags: netgo,ledger
+build_tags: netgo,faucet
 go: go version go1.15.3 linux/amd64
 ```
 
+NOTE: Make sure `build_tags` includes "faucet", which is required for testnet.
+
 ## Setup validator node
 
-If you are looking to join the testnet post genesis time (i.e, _21-Oct-2020 1600UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
+If you are looking to join the testnet post genesis time (i.e, _03-Nov-2020 1600UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
 
 Below are the instructions to generate & submit your genesis transaction
 
@@ -117,7 +119,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
 
 ### Start your validator node
 
-Once after the genesis is released (i.e., _20-Oct-2020 1600UTC_), follow the instructions below to start your validator node.
+Once after the genesis is released (i.e., _03-Nov-2020 1600UTC_), follow the instructions below to start your validator node.
 
 #### Genesis & seeds
 
