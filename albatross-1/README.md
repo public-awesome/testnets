@@ -2,8 +2,9 @@
 
 ## Minimum hardware requirements
 
-- 8GB RAM
-- 20GB free space
+- 1GB RAM
+- 25GB of disk space
+- 1.4 GHz CPU
 
 ## Software requirements
 
