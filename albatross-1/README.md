@@ -8,10 +8,10 @@
 
 ## Software requirements
 
-Stakebird has releases for Linux and MacOS [here](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0).
+Stakebird has releases for Linux and MacOS [here](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1).
 
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v0.3.0](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0)
+- Latest version : [v0.3.1](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1)
 
 ### Install Stakebird
 
@@ -19,7 +19,7 @@ You can install Stakebird by downloading the binary (easiest), or compiling from
 
 #### Download binary
 
-1. Download the binary for your platform: [releases](https://github.com/public-awesome/stakebird/releases/tag/v0.3.0).
+1. Download the binary for your platform: [releases](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1).
 2. Copy it to a location in your $PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
 
 #### Build from source
@@ -30,7 +30,7 @@ Requires [Go version v1.14+](https://golang.org/doc/install).
 > mkdir -p $GOPATH/src/github.com/public-awesome
 > cd $GOPATH/src/github.com/public-awesome
 > git clone https://github.com/public-awesome/stakebird && cd stakebird
-> git checkout v0.3.0
+> git checkout v0.3.1
 > FAUCET_ENABLED=true make install
 ```
 
@@ -47,8 +47,8 @@ It will display the version of staked currently installed:
 ```sh
 name: stakebird
 server_name: staked
-version: 0.3.0
-commit: 79e86d431c655831e236db68e7f6c62af1457b41
+version: 0.3.1
+commit: a29590fd67a3408b10774412822df72b932c29c5
 build_tags: netgo,faucet
 go: go version go1.15.3 linux/amd64
 ```
