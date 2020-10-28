@@ -17,12 +17,12 @@ Stakebird has releases for Linux and MacOS [here](https://github.com/public-awes
 
 You can install Stakebird by downloading the binary (easiest), or compiling from source.
 
-#### Download binary
+#### Option 1: Download binary
 
 1. Download the binary for your platform: [releases](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1).
 2. Copy it to a location in your $PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
 
-#### Build from source
+#### Option 2: Build from source
 
 Requires [Go version v1.14+](https://golang.org/doc/install).
 
@@ -57,7 +57,7 @@ NOTE: Make sure `build_tags` includes "faucet", which is required for testnet.
 
 ## Setup validator node
 
-If you are looking to join the testnet post genesis time (i.e, _03-Nov-2020 1600UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
+If you are looking to join the testnet post genesis time (_Nov 03 2020 1600 UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
 
 Below are the instructions to generate & submit your genesis transaction
 
@@ -99,7 +99,7 @@ Below are the instructions to generate & submit your genesis transaction
 
 Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
 
-- Fork the testnets repo into your Github account
+- Fork [the testnets repo](https://github.com/public-awesome/testnets) into your Github account
 
 - Clone your repo using
 
@@ -119,7 +119,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
 
 ### Start your validator node
 
-Once after the genesis is released (i.e., _03-Nov-2020 1600UTC_), follow the instructions below to start your validator node.
+Once after the genesis is released (_Nov 01 2020 1600 UTC_), follow the instructions below to start your validator node.
 
 #### Genesis & seeds
 
