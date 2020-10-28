@@ -1,4 +1,4 @@
-# Albatross Testnet Instructions
+# Stakebird Albatross Testnet Instructions
 
 ## Minimum hardware requirements
 
