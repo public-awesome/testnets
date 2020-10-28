@@ -97,25 +97,25 @@ Below are the instructions to generate & submit your genesis transaction
 
 ### Submit genesis transaction
 
-Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
+Submit your gentx in a PR [here](https://github.com/public-awesome/stakebird-testnets)
 
-- Fork [the testnets repo](https://github.com/public-awesome/testnets) into your Github account
+- Fork [the testnets repo](https://github.com/public-awesome/stakebird-testnets) into your Github account
 
 - Clone your repo using
 
     ```sh
-    > git clone https://github.com/<your-github-username>/testnets
+    > git clone https://github.com/<your-github-username>/stakebird-testnets
     ```
 
 - Copy the generated gentx json file to `<repo_path>/albatross-1/gentx/`
 
     ```sh
-    > cd $GOPATH/src/github.com/public-awesome/testnets
+    > cd $GOPATH/src/github.com/public-awesome/stakebird-testnets
     > cp ~/.staked/config/gentx/gentx*.json ./albatross-1/gentx/
     ```
 
 - Commit and push to your repo
-- Create a PR onto https://github.com/public-awesome/testnets
+- Create a PR onto https://github.com/public-awesome/stakebird-testnets
 
 ### Start your validator node
 
@@ -126,7 +126,7 @@ Once after the genesis is released (_Nov 01 2020 1600 UTC_), follow the instruct
 Fetch `genesis.json` into `staked`'s `config` directory.
 
 ```sh
-> curl https://raw.githubusercontent.com/public-awesome/testnets/master/albatross-1/genesis.json > $HOME/.staked/config/genesis.json
+> curl https://raw.githubusercontent.com/public-awesome/stakebird-testnets/master/albatross-1/genesis.json > $HOME/.staked/config/genesis.json
 ```
 
 Add seed nodes in `config.toml`.
@@ -239,4 +239,4 @@ This section applies to those who are looking to join the testnet post genesis.
    --from <key-name>
    ```
 
-4. Request tokens from the Discord [#validator](https://discord.gg/QeJWCrE) channel if you need more.
+4. Request tokens from the [Stakebird Discord #validator channel](https://discord.gg/QeJWCrE) if you need more.
