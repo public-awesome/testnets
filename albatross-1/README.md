@@ -110,7 +110,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/stakebird-tes
 - Copy the generated gentx json file to `<repo_path>/albatross-1/gentx/`
 
     ```sh
-    > cd $GOPATH/src/github.com/public-awesome/stakebird-testnets
+    > cd stakebird-testnets
     > cp ~/.staked/config/gentx/gentx*.json ./albatross-1/gentx/
     ```
 
