@@ -24,8 +24,8 @@ You can install Stakebird by downloading the binary (easiest), or compiling from
 
 i.e:
 ```sh
-wget https://github.com/public-awesome/stakebird/releases/download/v0.3.1/stakebird_0.3.1_linux_arm64.tar.gz
-sudo tar -C /usr/local/bin -zxvf stakebird_0.3.1_linux_arm64.tar.gz
+> wget https://github.com/public-awesome/stakebird/releases/download/v0.3.1/stakebird_0.3.1_linux_arm64.tar.gz
+> sudo tar -C /usr/local/bin -zxvf stakebird_0.3.1_linux_arm64.tar.gz
 ```
 
 #### Option 2: Build from source
