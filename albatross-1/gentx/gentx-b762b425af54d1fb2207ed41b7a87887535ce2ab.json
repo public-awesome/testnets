@@ -1,1 +1,58 @@
-{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"cluster-buster","identity":"","website":"","security_contact":"","details":""},"commission":{"rate":"0.100000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"stb1ldx0dhjsyhpq0apjrpwsvj3w5jk03kwu8jhyqj","validator_address":"stbvaloper1ldx0dhjsyhpq0apjrpwsvj3w5jk03kwu5zd0dg","pubkey":"stbvalconspub1zcjduepq9lvyh6fqf5w7mu8sv6hmth024zwam9ute0kkkuw8nfg8t4478f4qas3eve","value":{"denom":"uegg","amount":"900000000"}}],"memo":"b762b425af54d1fb2207ed41b7a87887535ce2ab@3.82.106.0:26656","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AkfXGcFbjndnMvastnABHUoydhuf0oElyXH2dA+KGDmb"},"mode_info":{"single":{"mode":"SIGN_MODE_DIRECT"}},"sequence":"0"}],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":["KBZrJbLQ422p4ArrtP2A8sCioti8tkzL6g/T8iTZLjk5Ai2duk6LUR8otUcqgH/ZOvvdu9AGOGQhDN8I4vRX8Q=="]}
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "cluster-buster",
+          "identity": "",
+          "website": "",
+          "security_contact": "",
+          "details": ""
+        },
+        "commission": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "min_self_delegation": "1",
+        "delegator_address": "stb1ldx0dhjsyhpq0apjrpwsvj3w5jk03kwu8jhyqj",
+        "validator_address": "stbvaloper1ldx0dhjsyhpq0apjrpwsvj3w5jk03kwu5zd0dg",
+        "pubkey": "stbvalconspub1zcjduepq9lvyh6fqf5w7mu8sv6hmth024zwam9ute0kkkuw8nfg8t4478f4qas3eve",
+        "value": {
+          "denom": "uegg",
+          "amount": "900000000"
+        }
+      }
+    ],
+    "memo": "b762b425af54d1fb2207ed41b7a87887535ce2ab@3.82.106.0:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "AkfXGcFbjndnMvastnABHUoydhuf0oElyXH2dA+KGDmb"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": [
+    "KBZrJbLQ422p4ArrtP2A8sCioti8tkzL6g/T8iTZLjk5Ai2duk6LUR8otUcqgH/ZOvvdu9AGOGQhDN8I4vRX8Q=="
+  ]
+}
