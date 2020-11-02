@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2020-10-29T20:00:24.230099Z",
-  "chain_id": "localnet-1",
+  "genesis_time": "2020-11-03T16:00:00Z",
+  "chain_id": "albatross-1",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -240,11 +240,11 @@
           "denom": "uatom",
           "amount": "1000000"
         },
-        "max_num_votes": 5,
+        "max_num_votes": 10,
         "max_vendors": 1,
         "reward_pool_allocation": "0.500000000000000000",
         "creator_allocation": "0.050000000000000000",
-        "reward_pool_curation_max_alloc": "0.001000000000000000",
+        "reward_pool_curation_max_alloc": "0.010000000000000000",
         "initial_reward_pool": {
           "denom": "ustb",
           "amount": "21000000000000"
@@ -917,7 +917,7 @@
     "params": null,
     "slashing": {
       "params": {
-        "signed_blocks_window": "100",
+        "signed_blocks_window": "1000",
         "min_signed_per_window": "0.500000000000000000",
         "downtime_jail_duration": "600s",
         "slash_fraction_double_sign": "0.050000000000000000",
