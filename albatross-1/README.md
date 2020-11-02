@@ -103,6 +103,10 @@ Below are the instructions to generate & submit your genesis transaction
 
 ### Submit genesis transaction
 
+> NOTE: To prevent malicious validators, and to ensure a fair and decentralized launch, the following rules will be enforced:
+> 1. Github accounts must be at least a year old
+> 2. Only one gentx per Github account is allowed
+
 Submit your gentx in a PR [here](https://github.com/public-awesome/stakebird-testnets)
 
 - Fork [the testnets repo](https://github.com/public-awesome/stakebird-testnets) into your Github account
