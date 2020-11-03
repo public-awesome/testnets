@@ -1,5 +1,15 @@
 # Stakebird Albatross Testnet Instructions
 
+## TLDR
+
+Block explorer: [https://explorer.albatross-1.publicawesome.dev/](https://explorer.albatross-1.publicawesome.dev/)
+
+Binaries: [v0.3.2](https://github.com/public-awesome/stakebird/releases/tag/v0.3.2)
+
+Genesis file: [genesis.json](https://github.com/public-awesome/stakebird-testnets/blob/master/albatross-1/genesis.json)
+
+Seeds: `840fd59f5040abbd9b7f82e71ccf0e90cc1a0295@seed.albatross-1.publicawesome.dev:36656`
+
 ## Minimum hardware requirements
 
 - 1GB RAM
