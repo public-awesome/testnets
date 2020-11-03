@@ -156,7 +156,7 @@ Find the following section and add the seed nodes.
 
 ```sh
 # Comma separated list of seed nodes to connect to
-seeds = ""
+seeds = "840fd59f5040abbd9b7f82e71ccf0e90cc1a0295@seed.albatross-1.publicawesome.dev:36656"
 ```
 
 ```sh
