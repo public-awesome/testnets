@@ -33,13 +33,6 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "stb1lanxaqrlwk88sgf3uf9yxyca3r9sldg9v9hs7k",
-          "pub_key": null,
-          "account_number": "0",
-          "sequence": "0"
-        },
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
           "address": "stb1vxpwkufwu75fk2ue93rwsjjpwsrvz4mfk4tqhd",
           "pub_key": null,
           "account_number": "0",
@@ -203,19 +196,6 @@
             {
               "denom": "uegg",
               "amount": "900000000"
-            }
-          ]
-        },
-        {
-          "address": "stb1lanxaqrlwk88sgf3uf9yxyca3r9sldg9v9hs7k",
-          "coins": [
-            {
-              "denom": "uatom",
-              "amount": "10000000000000000"
-            },
-            {
-              "denom": "uegg",
-              "amount": "10000000000000000"
             }
           ]
         }
