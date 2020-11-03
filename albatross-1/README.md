@@ -139,6 +139,13 @@ Fetch `genesis.json` into `staked`'s `config` directory.
 > curl https://raw.githubusercontent.com/public-awesome/stakebird-testnets/master/albatross-1/genesis.json > $HOME/.staked/config/genesis.json
 ```
 
+Verify you have the correct genesis file:
+
+```sh
+> shasum -a 256 ~/.staked/config/genesis.json
+fb13172f39d0e888601b828aea104e830aa64c3893ff478194e4d41b2e61f793  genesis.json
+```
+
 Add seed nodes in `config.toml`.
 
 ```sh
