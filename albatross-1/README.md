@@ -8,10 +8,10 @@
 
 ## Software requirements
 
-Stakebird has releases for Linux and MacOS [here](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1).
+Stakebird has releases for Linux and MacOS [here](https://github.com/public-awesome/stakebird/releases/tag/v0.3.2).
 
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v0.3.1](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1)
+- Latest version : [v0.3.2](https://github.com/public-awesome/stakebird/releases/tag/v0.3.2)
 
 ### Install Stakebird
 
@@ -19,13 +19,13 @@ You can install Stakebird by downloading the binary (easiest), or compiling from
 
 #### Option 1: Download binary
 
-1. Download the binary for your platform: [releases](https://github.com/public-awesome/stakebird/releases/tag/v0.3.1).
+1. Download the binary for your platform: [releases](https://github.com/public-awesome/stakebird/releases/tag/v0.3.2).
 2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
 
 i.e:
 ```sh
-> wget https://github.com/public-awesome/stakebird/releases/download/v0.3.1/stakebird_0.3.1_linux_arm64.tar.gz
-> sudo tar -C /usr/local/bin -zxvf stakebird_0.3.1_linux_arm64.tar.gz
+> wget https://github.com/public-awesome/stakebird/releases/download/v0.3.2/stakebird_0.3.2_linux_arm64.tar.gz
+> sudo tar -C /usr/local/bin -zxvf stakebird_0.3.2_linux_arm64.tar.gz
 ```
 
 #### Option 2: Build from source
@@ -36,7 +36,7 @@ Requires [Go version v1.14+](https://golang.org/doc/install).
 > mkdir -p $GOPATH/src/github.com/public-awesome
 > cd $GOPATH/src/github.com/public-awesome
 > git clone https://github.com/public-awesome/stakebird && cd stakebird
-> git checkout v0.3.1
+> git checkout v0.3.2
 > FAUCET_ENABLED=true make install
 ```
 
@@ -53,8 +53,8 @@ It will display the version of staked currently installed:
 ```sh
 name: stakebird
 server_name: staked
-version: 0.3.1
-commit: a29590fd67a3408b10774412822df72b932c29c5
+version: 0.3.2
+commit: a152fc6aab2f3259d24e071f58855cf445236b55
 build_tags: netgo,faucet
 go: go version go1.15.3 linux/amd64
 ```
