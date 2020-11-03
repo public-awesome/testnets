@@ -235,7 +235,7 @@
     },
     "curating": {
       "params": {
-        "curation_window": "259200s",
+        "curation_window": "86400s",
         "vote_amount": {
           "denom": "uatom",
           "amount": "1000000"
