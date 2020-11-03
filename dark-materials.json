@@ -1,0 +1,58 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "dark-materials",
+          "identity": "",
+          "website": "",
+          "security_contact": "",
+          "details": ""
+        },
+        "commission": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "min_self_delegation": "1",
+        "delegator_address": "stb1vxpwkufwu75fk2ue93rwsjjpwsrvz4mfk4tqhd",
+        "validator_address": "stbvaloper1vxpwkufwu75fk2ue93rwsjjpwsrvz4mf993t6h",
+        "pubkey": "stbvalconspub1zcjduepqltxpxpn3es4s50quemzk845n0knh4ljxyx0tf3hx3xfxg6ja9nsseu6zq7",
+        "value": {
+          "denom": "uegg",
+          "amount": "900000000"
+        }
+      }
+    ],
+    "memo": "1909c3833740b4fdd4cc8ac653eb03923fcf4803@174.138.127.207:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "AgDEX2GRw4pruaOsn+H0OgRLIduEFMCOp9F1x1imUPBb"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": [
+    "vgeZlo0zTwxBMfpGCNiMcZtox58jXePM3VlR9l7rg/NpYl+Ht07rmvuxe86ih73ntTcvlKXoEYDM+sZVIfJRag=="
+  ]
+}
