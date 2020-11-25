@@ -191,7 +191,7 @@ minimum-gas-prices = "0.025uatom,0.025uegg"
 Create a `systemd` service
 
 ```sh
-> sudo vi /lib/systemd/system/staked.service
+> sudo vi /etc/systemd/system/staked.service
 ```
 
 Copy and paste the following and update `<your_username>` and `<go_workspace>`:
