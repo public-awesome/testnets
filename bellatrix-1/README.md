@@ -6,9 +6,9 @@ Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explor
 
 Binaries: [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
 
-Genesis file: [genesis.json](https://github.com/public-awesome/stargaze-testnets/blob/master/bellatrix-1/genesis.json)
+Genesis file: to be released
 
-Seeds: `840fd59f5040abbd9b7f82e71ccf0e90cc1a0295@seed.bellatrix-1.publicawesome.dev:36656`
+Seeds: coming soon
 
 ## Minimum hardware requirements
 
@@ -73,7 +73,7 @@ NOTE: Make sure `build_tags` includes "faucet", which is required for testnet.
 
 ## Setup validator node
 
-If you are looking to join the testnet post genesis time (_Nov 03 2020 1600 UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
+If you are looking to join the testnet post genesis time (_MAR 23 2021 1600 UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
 
 Below are the instructions to generate & submit your genesis transaction
 
@@ -114,7 +114,7 @@ Below are the instructions to generate & submit your genesis transaction
 ### Submit genesis transaction
 
 > NOTE: To prevent malicious validators, and to ensure a fair and decentralized launch, the following rules will be enforced:
-> 1. Github accounts must be at least a year old
+> 1. Github accounts must be at least a year old and have history; accounts with little activity may not be accepted.
 > 2. Only one gentx per Github account is allowed
 
 Submit your gentx in a PR [here](https://github.com/public-awesome/stargaze-testnets)
@@ -139,7 +139,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/stargaze-test
 
 ### Start your validator node
 
-Once after the genesis is released (_MAR 23 2021 1600 UTC_), follow the instructions below to start your validator node.
+Once after the genesis is released (_MAR 22 2021 1600 UTC_), follow the instructions below to start your validator node.
 
 #### Genesis & seeds
 
