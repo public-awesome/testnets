@@ -28,7 +28,21 @@ Stargaze has releases for Linux and MacOS [here](https://github.com/public-aweso
 You can install Stargaze by downloading the binary (easiest), or compiling from source.
 
 
-#### Build from source
+
+#### Option 1: Download binary
+
+1. Download the binary for your platform: [releases](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
+2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
+
+i.e:
+```sh
+# libwasmvm.so is needed by cgo bindings
+> sudo wget https://github.com/CosmWasm/wasmvm/raw/v0.13.0/api/libwasmvm.so -O /lib/libwasmvm.so
+> wget https://github.com/public-awesome/stargaze/releases/download/v0.6.0/stargaze_0.6.0_linux_amd64.tar.gz
+> sudo tar -C /usr/local/bin -zxvf stargaze_0.6.0_linux_amd64.tar.gz
+```
+
+#### Option 2: Build from source
 
 Requires [Go version v1.15+](https://golang.org/doc/install).
 
