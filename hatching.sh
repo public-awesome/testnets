@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NETWORK=albatross-1
+NETWORK=bellatrix-1
 CONFIG=~/.starsd/config
 INITIAL_COINS=100000000ustarx
 
