@@ -18,7 +18,7 @@ Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.
 
 ## Software requirements
 
-Stargaze has releases for Linux and MacOS [here](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
+Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
 
 - [Ubuntu Setup Guide](./ubuntu.md)
 - Latest version : [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
