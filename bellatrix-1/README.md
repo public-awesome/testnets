@@ -12,7 +12,7 @@ Seeds: coming soon
 
 ## Minimum hardware requirements
 
-- 1GB RAM
+- 2GB RAM
 - 25GB of disk space
 - 1.4 GHz CPU
 
@@ -27,14 +27,13 @@ Stargaze has releases for Linux and MacOS [here](https://github.com/public-aweso
 
 You can install Stargaze by downloading the binary (easiest), or compiling from source.
 
-
-
 #### Option 1: Download binary
 
 1. Download the binary for your platform: [releases](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
 2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
 
 i.e:
+
 ```sh
 # libwasmvm.so is needed by cgo bindings
 > sudo wget https://github.com/CosmWasm/wasmvm/raw/v0.13.0/api/libwasmvm.so -O /lib/libwasmvm.so
@@ -98,27 +97,28 @@ Below are the instructions to generate & submit your genesis transaction
    ```
 
 3. Add your account to your local genesis file with a given amount and the key you
-   just created. Use only `1000000000ustarx`, other amounts will be ignored. STARX is testnet STAR.
+   just created. Use only `100000000ustarx`, other amounts will be ignored. STARX is testnet STAR.
 
    ```sh
-   > starsd add-genesis-account $(starsd keys show <key-name> -a) 1000000000ustarx
+   > starsd add-genesis-account $(starsd keys show <key-name> -a) 100000000ustarx
    ```
 
 4. Create the gentx
 
    ```sh
-   > starsd gentx <key-name> --amount=900000000ustarx --chain-id=bellatrix-1
+   > starsd gentx <key-name> --amount=90000000ustarx --chain-id=bellatrix-1
    ```
 
    If all goes well, you will see a message similar to the following:
 
-    ```sh
-    Genesis transaction written to "/home/user/.starsd/config/gentx/gentx-******.json"
-    ```
+   ```sh
+   Genesis transaction written to "/home/user/.starsd/config/gentx/gentx-******.json"
+   ```
 
 ### Submit genesis transaction
 
 > NOTE: To prevent malicious validators, and to ensure a fair and decentralized launch, the following rules will be enforced:
+>
 > 1. Github accounts must be at least a year old and have history; accounts with little activity may not be accepted.
 > 2. Only one gentx per Github account is allowed
 > 3. We reserve the right to exercise our best judgement to protect the network against Sybil attacks. Preference will be given to validators with a proven track record of validating for other networks.
@@ -129,16 +129,16 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/stargaze-test
 
 - Clone your repo using
 
-    ```sh
-    > git clone https://github.com/<your-github-username>/stargaze-testnets
-    ```
+  ```sh
+  > git clone https://github.com/<your-github-username>/stargaze-testnets
+  ```
 
 - Copy the generated gentx json file to `<repo_path>/bellatrix-1/gentx/`
 
-    ```sh
-    > cd stargaze-testnets
-    > cp ~/.starsd/config/gentx/gentx*.json ./bellatrix-1/gentx/
-    ```
+  ```sh
+  > cd stargaze-testnets
+  > cp ~/.starsd/config/gentx/gentx*.json ./bellatrix-1/gentx/
+  ```
 
 - Commit and push to your repo
 - Create a PR onto https://github.com/public-awesome/stargaze-testnets
@@ -172,7 +172,7 @@ Find the following section and add the seed nodes.
 
 ```sh
 # Comma separated list of seed nodes to connect to
-seeds = ""
+seeds = "c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656"
 ```
 
 ```sh
@@ -182,14 +182,14 @@ persistent_peers = ""
 
 #### Set validator gas fees
 
-You can set the minimum gas prices for transactions to be accepted into your node's mempool. This sets a lower bound on gas prices, preventing spam. Stargaze can accept gas in *any* currency. To accept both ATOM and STARX for example, set `minimum-gas-prices` in `app.toml`.
+You can set the minimum gas prices for transactions to be accepted into your node's mempool. This sets a lower bound on gas prices, preventing spam. Stargaze can accept gas in _any_ currency. To accept both ATOM and STARX for example, set `minimum-gas-prices` in `app.toml`.
 
 ```sh
 > vi $HOME/.starsd/config/app.toml
 ```
 
 ```sh
-minimum-gas-prices = "0.025uatom,0.025ustarx"
+minimum-gas-prices = "0.025ustarx"
 ```
 
 #### Start node automatically (Linux only)
