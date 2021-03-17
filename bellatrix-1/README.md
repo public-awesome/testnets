@@ -59,14 +59,14 @@ Requires [Go version v1.15+](https://golang.org/doc/install).
 To verify if the installation was successful, execute the following command:
 
 ```sh
-> starsd version --long
+> staked version --long
 ```
 
-It will display the version of starsd currently installed:
+It will display the version of staked currently installed:
 
 ```sh
 name: stargaze
-server_name: starsd
+server_name: staked
 version: 0.6.0
 commit: 3f7bed1cd9384eeca878277e4dcb92d1aa3aea1b
 build_tags: netgo,faucet
@@ -87,32 +87,32 @@ Below are the instructions to generate & submit your genesis transaction
    chain-id
 
    ```sh
-   > starsd init <moniker-name> --chain-id=bellatrix-1
+   > staked init <moniker-name> --chain-id=bellatrix-1
    ```
 
 2. Create a local key pair
 
    ```sh
-   > starsd keys add <key-name>
+   > staked keys add <key-name>
    ```
 
 3. Add your account to your local genesis file with a given amount and the key you
    just created. Use only `100000000ustarx`, other amounts will be ignored. STARX is testnet STAR.
 
    ```sh
-   > starsd add-genesis-account $(starsd keys show <key-name> -a) 100000000ustarx
+   > staked add-genesis-account $(staked keys show <key-name> -a) 100000000ustarx
    ```
 
 4. Create the gentx
 
    ```sh
-   > starsd gentx <key-name> --amount=90000000ustarx --chain-id=bellatrix-1
+   > staked gentx <key-name> --amount=90000000ustarx --chain-id=bellatrix-1
    ```
 
    If all goes well, you will see a message similar to the following:
 
    ```sh
-   Genesis transaction written to "/home/user/.starsd/config/gentx/gentx-******.json"
+   Genesis transaction written to "/home/user/.staked/config/gentx/gentx-******.json"
    ```
 
 ### Submit genesis transaction
@@ -137,7 +137,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/stargaze-test
 
   ```sh
   > cd stargaze-testnets
-  > cp ~/.starsd/config/gentx/gentx*.json ./bellatrix-1/gentx/
+  > cp ~/.staked/config/gentx/gentx*.json ./bellatrix-1/gentx/
   ```
 
 - Commit and push to your repo
@@ -149,23 +149,23 @@ Once after the genesis is released (_MAR 22 2021 1600 UTC_), follow the instruct
 
 #### Genesis & seeds
 
-Fetch `genesis.json` into `starsd`'s `config` directory.
+Fetch `genesis.json` into `staked`'s `config` directory.
 
 ```sh
-> curl https://raw.githubusercontent.com/public-awesome/stargaze-testnets/master/bellatrix-1/genesis.json > $HOME/.starsd/config/genesis.json
+> curl https://raw.githubusercontent.com/public-awesome/stargaze-testnets/master/bellatrix-1/genesis.json > $HOME/.staked/config/genesis.json
 ```
 
 Verify you have the correct genesis file:
 
 ```sh
-> shasum -a 256 ~/.starsd/config/genesis.json
+> shasum -a 256 ~/.staked/config/genesis.json
 fb13172f39d0e888601b828aea104e830aa64c3893ff478194e4d41b2e61f793  genesis.json
 ```
 
 Add seed nodes in `config.toml`.
 
 ```sh
-> vi $HOME/.starsd/config/config.toml
+> vi $HOME/.staked/config/config.toml
 ```
 
 Find the following section and add the seed nodes.
@@ -185,7 +185,7 @@ persistent_peers = ""
 You can set the minimum gas prices for transactions to be accepted into your node's mempool. This sets a lower bound on gas prices, preventing spam. Stargaze can accept gas in _any_ currency. To accept both ATOM and STARX for example, set `minimum-gas-prices` in `app.toml`.
 
 ```sh
-> vi $HOME/.starsd/config/app.toml
+> vi $HOME/.staked/config/app.toml
 ```
 
 ```sh
@@ -197,19 +197,19 @@ minimum-gas-prices = "0.025ustarx"
 Create a `systemd` service
 
 ```sh
-> sudo vi /etc/systemd/system/starsd.service
+> sudo vi /etc/systemd/system/staked.service
 ```
 
 Copy and paste the following and update `<your_username>` and `<go_workspace>`:
 
 ```sh
 [Unit]
-Description=starsd
+Description=staked
 After=network-online.target
 
 [Service]
 User=<your_username>
-ExecStart=/home/<your_username>/<go_workspace>/bin/starsd start
+ExecStart=/home/<your_username>/<go_workspace>/bin/staked start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
@@ -221,20 +221,20 @@ WantedBy=multi-user.target
 **This assumes `$HOME/go_workspace` to be your Go workspace. Your actual workspace directory may vary.**
 
 ```sh
-> sudo systemctl enable starsd
-> sudo systemctl start starsd
+> sudo systemctl enable staked
+> sudo systemctl start staked
 ```
 
 Check node status
 
 ```sh
-> starsd status
+> staked status
 ```
 
 Check logs
 
 ```sh
-> journalctl -u starsd -f
+> journalctl -u staked -f
 ```
 
 ## Create testnet validator
@@ -244,7 +244,7 @@ This section applies to those who are looking to join the testnet post genesis.
 1. Init Chain and start your node
 
    ```sh
-   > starsd init <moniker-name> --chain-id=bellatrix-1 --stake-denom=ustarx
+   > staked init <moniker-name> --chain-id=bellatrix-1 --stake-denom=ustarx
    ```
 
    After that, please follow all the instructions from [Start your validator node](#start-your-validator-node)
@@ -252,21 +252,21 @@ This section applies to those who are looking to join the testnet post genesis.
 2. Create a local key pair
 
    ```sh
-   > starsd keys add <key-name>
-   > starsd keys show <key-name> -a
+   > staked keys add <key-name>
+   > staked keys show <key-name> -a
    ```
 
 3. Create validator
 
    ```sh
-   $ starsd tx staking create-validator \
+   $ staked tx staking create-validator \
    --amount 9000000000ustarx \
    --commission-max-change-rate "0.1" \
    --commission-max-rate "0.20" \
    --commission-rate "0.1" \
    --min-self-delegation "1" \
    --details "validators write bios too" \
-   --pubkey=$(starsd tendermint show-validator) \
+   --pubkey=$(staked tendermint show-validator) \
    --moniker <your_moniker> \
    --chain-id bellatrix-1 \
    --from <key-name>
