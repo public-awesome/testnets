@@ -2,13 +2,13 @@
 
 ## TLDR
 
-Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/)
+Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/) (Coming soon)
 
 Binaries: [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
 
 Genesis file: to be released
 
-Seeds: coming soon
+Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656`
 
 ## Minimum hardware requirements
 
