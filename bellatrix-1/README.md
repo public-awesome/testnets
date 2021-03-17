@@ -27,18 +27,8 @@ Stargaze has releases for Linux and MacOS [here](https://github.com/public-aweso
 
 You can install Stargaze by downloading the binary (easiest), or compiling from source.
 
-#### Option 1: Download binary
 
-1. Download the binary for your platform: [releases](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
-2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
-
-i.e:
-```sh
-> wget https://github.com/public-awesome/stargaze/releases/download/v0.6.0/stargaze_0.3.2_linux_arm64.tar.gz
-> sudo tar -C /usr/local/bin -zxvf stargaze_0.3.2_linux_arm64.tar.gz
-```
-
-#### Option 2: Build from source
+#### Build from source
 
 Requires [Go version v1.15+](https://golang.org/doc/install).
 
@@ -46,6 +36,7 @@ Requires [Go version v1.15+](https://golang.org/doc/install).
 > mkdir -p $GOPATH/src/github.com/public-awesome
 > cd $GOPATH/src/github.com/public-awesome
 > git clone https://github.com/public-awesome/stargaze && cd stargaze
+> git fetch origin --tags
 > git checkout v0.6.0
 > FAUCET_ENABLED=true make install
 ```
@@ -64,7 +55,7 @@ It will display the version of starsd currently installed:
 name: stargaze
 server_name: starsd
 version: 0.6.0
-commit: a152fc6aab2f3259d24e071f58855cf445236b55
+commit: 3f7bed1cd9384eeca878277e4dcb92d1aa3aea1b
 build_tags: netgo,faucet
 go: go version go1.15.8 linux/amd64
 ```
@@ -166,12 +157,12 @@ Find the following section and add the seed nodes.
 
 ```sh
 # Comma separated list of seed nodes to connect to
-seeds = "840fd59f5040abbd9b7f82e71ccf0e90cc1a0295@seed.bellatrix-1.publicawesome.dev:36656"
+seeds = ""
 ```
 
 ```sh
 # Comma separated list of persistent peers to connect to
-persistent_peers = "a81c314a4619f85cccbb9bb69eeabd9d385bc82b@3.82.106.0:26656"
+persistent_peers = ""
 ```
 
 #### Set validator gas fees
