@@ -119,7 +119,7 @@ Below are the instructions to generate & submit your genesis transaction
 
 > NOTE: To prevent malicious validators, and to ensure a fair and decentralized launch, the following rules will be enforced:
 >
-> 1. Github accounts must be at least a year old and have history; accounts with little activity may not be accepted.
+> 1. Github accounts must be at least 6 months old and have history; accounts with little activity may not be accepted.
 > 2. Only one gentx per Github account is allowed
 > 3. We reserve the right to exercise our best judgement to protect the network against Sybil attacks. Preference will be given to validators with a proven track record of validating for other networks.
 
