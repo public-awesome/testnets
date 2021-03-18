@@ -123,25 +123,25 @@ Below are the instructions to generate & submit your genesis transaction
 > 2. Only one gentx per Github account is allowed
 > 3. We reserve the right to exercise our best judgement to protect the network against Sybil attacks. Preference will be given to validators with a proven track record of validating for other networks.
 
-Submit your gentx in a PR [here](https://github.com/public-awesome/stargaze-testnets)
+Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
 
-- Fork [the testnets repo](https://github.com/public-awesome/stargaze-testnets) into your Github account
+- Fork [the testnets repo](https://github.com/public-awesome/testnets) into your Github account
 
 - Clone your repo using
 
   ```sh
-  > git clone https://github.com/<your-github-username>/stargaze-testnets
+  > git clone https://github.com/<your-github-username>/testnets
   ```
 
 - Copy the generated gentx json file to `<repo_path>/bellatrix-1/gentx/`
 
   ```sh
-  > cd stargaze-testnets
+  > cd testnets
   > cp ~/.starsd/config/gentx/gentx*.json ./bellatrix-1/gentx/
   ```
 
 - Commit and push to your repo
-- Create a PR onto https://github.com/public-awesome/stargaze-testnets
+- Create a PR onto https://github.com/public-awesome/testnets
 
 ### Start your validator node
 
@@ -152,7 +152,7 @@ Once after the genesis is released (_MAR 22 2021 1600 UTC_), follow the instruct
 Fetch `genesis.json` into `starsd`'s `config` directory.
 
 ```sh
-> curl https://raw.githubusercontent.com/public-awesome/stargaze-testnets/master/bellatrix-1/genesis.json > $HOME/.starsd/config/genesis.json
+> curl https://raw.githubusercontent.com/public-awesome/testnets/master/bellatrix-1/genesis.json > $HOME/.starsd/config/genesis.json
 ```
 
 Verify you have the correct genesis file:
