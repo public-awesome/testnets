@@ -106,7 +106,7 @@ Below are the instructions to generate & submit your genesis transaction
 4. Create the gentx
 
    ```sh
-   > starsd gentx <key-name> --amount=90000000ustarx --chain-id=bellatrix-1
+   > starsd gentx <key-name> 90000000ustarx --chain-id=bellatrix-1
    ```
 
    If all goes well, you will see a message similar to the following:
