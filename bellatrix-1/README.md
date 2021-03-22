@@ -159,7 +159,7 @@ Verify you have the correct genesis file:
 
 ```sh
 > shasum -a 256 ~/.starsd/config/genesis.json
-6766623e50ac9ca8585d4e202b7ef627e85210e7fd10da633c1fb04d381e0bb1  genesis.json
+475506e446c5059910c1180f29016444599e6c42b387a2f1e469308a8806fb2c  genesis.json
 ```
 
 Add seed nodes in `config.toml`.
