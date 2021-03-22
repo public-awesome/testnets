@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2021-03-17T22:46:36.220998Z",
+  "genesis_time": "2021-03-23T16:00:00Z",
   "chain_id": "bellatrix-1",
   "initial_height": "1",
   "consensus_params": {
@@ -1346,18 +1346,18 @@
     "crisis": {
       "constant_fee": {
         "denom": "ustarx",
-        "amount": "1000"
+        "amount": "100000000"
       }
     },
     "curating": {
       "params": {
-        "curation_window": "600s",
+        "curation_window": "24h",
         "vote_amount": {
           "denom": "ucredits",
           "amount": "1000000"
         },
-        "max_num_votes": 5,
-        "max_vendors": 1,
+        "max_num_votes": 10,
+        "max_vendors": 2,
         "reward_pool_allocation": "0.500000000000000000",
         "max_post_body_length": 280,
         "reward_pool_curation_max_alloc": "0.001000000000000000",
@@ -6351,10 +6351,10 @@
             "amount": "10000000"
           }
         ],
-        "max_deposit_period": "172800s"
+        "max_deposit_period": "24h"
       },
       "voting_params": {
-        "voting_period": "172800s"
+        "voting_period": "24h"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
@@ -6435,7 +6435,7 @@
     "params": null,
     "slashing": {
       "params": {
-        "signed_blocks_window": "100",
+        "signed_blocks_window": "3000",
         "min_signed_per_window": "0.500000000000000000",
         "downtime_jail_duration": "600s",
         "slash_fraction_double_sign": "0.050000000000000000",
@@ -6447,7 +6447,7 @@
     "stake": null,
     "staking": {
       "params": {
-        "unbonding_time": "1814400s",
+        "unbonding_time": "72h",
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
@@ -6474,7 +6474,7 @@
       "params": {
         "threshold_amount": [
           {
-            "denom": "ustb",
+            "denom": "ustarx",
             "amount": "1000000"
           }
         ],
