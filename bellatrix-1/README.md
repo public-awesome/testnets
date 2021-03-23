@@ -10,6 +10,8 @@ Genesis file: [genesis.json](https://github.com/public-awesome/testnets/releases
 
 Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656`
 
+Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
+
 ## Minimum hardware requirements
 
 - 2GB RAM
