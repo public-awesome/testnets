@@ -271,6 +271,7 @@ This section applies to those who are looking to join the testnet post genesis.
    --pubkey=$(starsd tendermint show-validator) \
    --moniker <your_moniker> \
    --chain-id bellatrix-1 \
+   --gas-prices 0.025ustarx \
    --from <key-name>
    ```
 
