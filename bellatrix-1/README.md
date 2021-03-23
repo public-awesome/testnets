@@ -262,7 +262,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
    ```sh
    $ starsd tx staking create-validator \
-   --amount 9000000000ustarx \
+   --amount 9000000ustarx \
    --commission-max-change-rate "0.1" \
    --commission-max-rate "0.20" \
    --commission-rate "0.1" \
