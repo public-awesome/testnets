@@ -16,3 +16,5 @@ Create a new `moniker.json` file following the template in `bellatrix-1/challeng
   "redelegate_hash": "hash"
 }
 ```
+
+## 3.- Open a pull request
