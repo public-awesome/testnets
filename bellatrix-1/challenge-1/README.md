@@ -9,7 +9,7 @@ Create a new `moniker.json` file following the template in `bellatrix-1/challeng
 ```json
 {
   "operator_address": "starsvaloper...",
-  "moniker": "my_monyker",
+  "moniker": "my_moniker",
   "send_tx_hash": "hash",
   "tweet_tx_hash": "hash",
   "withdraw_rewards_hash": "hash",
