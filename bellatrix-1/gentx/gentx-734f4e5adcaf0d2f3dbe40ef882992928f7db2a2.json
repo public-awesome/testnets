@@ -4,7 +4,7 @@
       {
         "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
         "description": {
-          "moniker": "tsundokum",
+          "moniker": "Kivo",
           "identity": "",
           "website": "",
           "security_contact": "",
@@ -16,11 +16,11 @@
           "max_change_rate": "0.010000000000000000"
         },
         "min_self_delegation": "1",
-        "delegator_address": "stars1l44sjkc4q68j6z2vm3nk2h0h7pv7u33ktfdqtu",
-        "validator_address": "starsvaloper1l44sjkc4q68j6z2vm3nk2h0h7pv7u33kqhe5sy",
+        "delegator_address": "stars1xsysd5wxp0kk20wffghsq6trnk2d4hysk380t5",
+        "validator_address": "starsvaloper1xsysd5wxp0kk20wffghsq6trnk2d4hysa0nmsv",
         "pubkey": {
           "@type": "/cosmos.crypto.ed25519.PubKey",
-          "key": "v6taI54qLvZySAlF2oo68HIxxsaiTdNe47WjsHhhEXw="
+          "key": "d9bsJg3yMdsCD0MbePjipQ8wJewcsdoFjII0g9MqU98="
         },
         "value": {
           "denom": "ustarx",
@@ -28,7 +28,7 @@
         }
       }
     ],
-    "memo": "4434937583e4b256798f2c96317c60e982b4a4db@65.21.53.42:26656",
+    "memo": "734f4e5adcaf0d2f3dbe40ef882992928f7db2a2@10.128.0.10:26656",
     "timeout_height": "0",
     "extension_options": [],
     "non_critical_extension_options": []
@@ -38,7 +38,7 @@
       {
         "public_key": {
           "@type": "/cosmos.crypto.secp256k1.PubKey",
-          "key": "AjgOqP+TuXja9HbRssGKbl10YVSOiCjlhueEPLmI3qYp"
+          "key": "AwORPL2KPPf3BiW6KC83MNnqOrRffaQBoUXbXMr6gyBQ"
         },
         "mode_info": {
           "single": {
@@ -56,6 +56,6 @@
     }
   },
   "signatures": [
-    "F+fGARpeaT+2v2xha8/w1L65pHRc3UqhNdpTyAD+VH8F++W1K82qf/MhqRyz1DNadpQo19Chg9zz2mgWcgqnxw=="
+    "fAwzyCh/XtELqMZrBZXiwMEulgoYgWsCz4bgaQtDJt9TaJwGNpdsEOhnSQnzmSHbw7p4n7LbaqyMZxYBKxS2xw=="
   ]
 }
