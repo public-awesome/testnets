@@ -1,8 +1,8 @@
 {
   "operator_address": "starsvaloper1qa4z7tslm7lhldcjlcwhhtyewjkt7d272zt0ht",
   "moniker": "WARFI",
-  "send_tx_hash": "hash",
+  "send_tx_hash": "56D554BC99A7A6921DE7A13AAEA08E62326D489E4E81041E5046A5F68A2CE4ED",
   "tweet_tx_hash": "hash",
-  "withdraw_rewards_hash": "hash",
-  "redelegate_hash": "hash"
+  "withdraw_rewards_hash": "E934A447D4297F5A74CE14AB3B415594E2F6101BDB813CFEEBAD50666FB5E695",
+  "redelegate_hash": "E534B6A6217A208AD542A972FD6FADA6CDD2A25323DE7046A9C34A14CDBA002C"
 }
