@@ -1,0 +1,61 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "Syd",
+          "identity": "",
+          "website": "",
+          "security_contact": "",
+          "details": ""
+        },
+        "commission": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "min_self_delegation": "1",
+        "delegator_address": "stars164pw4hw8yezrhxsg9gkga040d0glyxt6wtfaev",
+        "validator_address": "starsvaloper164pw4hw8yezrhxsg9gkga040d0glyxt694afz5",
+        "pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "FwUdIgNdQBIsaKiyDX4TEoIb720VCM9OEQu8rwrTmvE="
+        },
+        "value": {
+          "denom": "ustarx",
+          "amount": "90000000"
+        }
+      }
+    ],
+    "memo": "0d6d1109458fe6d74fe5a806bf2bf79e70e713ca@46.101.255.192:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "A2TtS23v5k2Y5PoQT+3Jh5VJA1jHhBluhW1WY+rFkf96"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": [
+    "YwdaP62UYCB2x3DeNLH0EYwbeutSl47a/KhQg2+8fv4vwq5HtU1297J5D50mPB+z90FvKN6wRdWHciJURa9H6Q=="
+  ]
+}
