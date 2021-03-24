@@ -12,6 +12,8 @@ Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.
 
 Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
 
+## Challenges
+- [Phase-1 Challenge 1](https://github.com/public-awesome/testnets/blob/master/bellatrix-1/challenge-1/README.md)
 ## Minimum hardware requirements
 
 - 2GB RAM
@@ -262,7 +264,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
    ```sh
    $ starsd tx staking create-validator \
-   --amount 9000000000ustarx \
+   --amount 9000000ustarx \
    --commission-max-change-rate "0.1" \
    --commission-max-rate "0.20" \
    --commission-rate "0.1" \
@@ -271,6 +273,7 @@ This section applies to those who are looking to join the testnet post genesis.
    --pubkey=$(starsd tendermint show-validator) \
    --moniker <your_moniker> \
    --chain-id bellatrix-1 \
+   --gas-prices 0.025ustarx \
    --from <key-name>
    ```
 
