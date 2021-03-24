@@ -4,7 +4,7 @@
 
 ## 2.- Submit TX information
 
-Create a new `moniker.json` file following the template in `bellatrix-1/challenge-1/`
+Create a new `<my_moniker>.json` file  where <my_moniker> is the name of your validator  following the template in `bellatrix-1/challenge-1/`
 
 ```json
 {
