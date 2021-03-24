@@ -1,0 +1,8 @@
+{
+  "operator_address": "starsvaloper1qa4z7tslm7lhldcjlcwhhtyewjkt7d272zt0ht",
+  "moniker": "WARFI",
+  "send_tx_hash": "hash",
+  "tweet_tx_hash": "hash",
+  "withdraw_rewards_hash": "hash",
+  "redelegate_hash": "hash"
+}
