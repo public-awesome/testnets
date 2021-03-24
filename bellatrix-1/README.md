@@ -262,7 +262,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
    ```sh
    $ starsd tx staking create-validator \
-   --amount 9000000000ustarx \
+   --amount 9000000ustarx \
    --commission-max-change-rate "0.1" \
    --commission-max-rate "0.20" \
    --commission-rate "0.1" \
@@ -271,6 +271,7 @@ This section applies to those who are looking to join the testnet post genesis.
    --pubkey=$(starsd tendermint show-validator) \
    --moniker <your_moniker> \
    --chain-id bellatrix-1 \
+   --gas-prices 0.025ustarx \
    --from <key-name>
    ```
 
