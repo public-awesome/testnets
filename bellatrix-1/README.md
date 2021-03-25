@@ -2,13 +2,15 @@
 
 ## TLDR
 
-Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/) (Coming soon)
+Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/)
 
 Binaries: [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
 
-Genesis file: to be released
+Genesis file: [genesis.json](https://github.com/public-awesome/testnets/releases/download/bellatrix-1/genesis.json)
 
 Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656`
+
+Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
 
 ## Minimum hardware requirements
 
@@ -119,7 +121,7 @@ Below are the instructions to generate & submit your genesis transaction
 
 > NOTE: To prevent malicious validators, and to ensure a fair and decentralized launch, the following rules will be enforced:
 >
-> 1. Github accounts must be at least a year old and have history; accounts with little activity may not be accepted.
+> 1. Github accounts must be at least 6 months old and have history; accounts with little activity may not be accepted.
 > 2. Only one gentx per Github account is allowed
 > 3. We reserve the right to exercise our best judgement to protect the network against Sybil attacks. Preference will be given to validators with a proven track record of validating for other networks.
 
@@ -159,7 +161,7 @@ Verify you have the correct genesis file:
 
 ```sh
 > shasum -a 256 ~/.starsd/config/genesis.json
-fb13172f39d0e888601b828aea104e830aa64c3893ff478194e4d41b2e61f793  genesis.json
+9f97fdbdcc358bb3cf2a32ddad51c7172a2c0fee0023f56cd69457c8500804cc  genesis.json
 ```
 
 Add seed nodes in `config.toml`.
