@@ -1,0 +1,61 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "therealssj",
+          "identity": "",
+          "website": "",
+          "security_contact": "",
+          "details": ""
+        },
+        "commission": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "min_self_delegation": "1",
+        "delegator_address": "stars1jjp527y9mu2xv693zyrlfrquastdhjya97yrsg",
+        "validator_address": "starsvaloper1jjp527y9mu2xv693zyrlfrquastdhjyawqshts",
+        "pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "Hr4lOAnu9KiAGWpEFA3MeaIZNvPCXxFHXQK63DT/iRk="
+        },
+        "value": {
+          "denom": "ustarx",
+          "amount": "90000000"
+        }
+      }
+    ],
+    "memo": "a06f22c4b8d17f596a6bf62192beb03504690f68@66.42.67.187:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "AzF3Y3xxXQZ6Y+8OatVoN77gj3sy17t83ivoKuiDe8db"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": [
+    "Yuw4CEq4osMWpwwGGQtxcx1iniNrYeuzLXmbwlGUg+VTtH50OpglKqpbeK+kVH94TDUmAP5iXduHfVwT5x6/Ww=="
+  ]
+}
