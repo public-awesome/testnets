@@ -1,1 +1,8 @@
-{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"gloreix","identity":"","website":"","security_contact":"","details":""},"commission":{"rate":"0.100000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"stars10d3af9gms6dl6hrk7fuww6vjgu2y06l84jtr8z","validator_address":"starsvaloper10d3af9gms6dl6hrk7fuww6vjgu2y06l87vlhu6","pubkey":{"@type":"/cosmos.crypto.ed25519.PubKey","key":"FMkIwXFMIQ2cyB1dcM2JYXJDIqpdJpj46c+FHjjl8rE="},"value":{"denom":"ustarx","amount":"90000000"}}],"memo":"477503ad325050372b03a4057208ac7d29c11f7b@10.128.0.4:26656","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AtAEUZRRUxCH9APMr4bQh3I34OFrpHEbDewF13J4eNnF"},"mode_info":{"single":{"mode":"SIGN_MODE_DIRECT"}},"sequence":"0"}],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":["263Xt2dQitCEyy4P4g5wgW9waauO7gAEsqTOLu5SpJR/YfNJwVyL3Nopfnt5pIz/LXrSE93Bz1S33G8kCpPinw=="]}
+{
+  "operator_address": "starsvaloper10d3af9gms6dl6hrk7fuww6vjgu2y06l87vlhu6",
+  "moniker": "gloreix",
+  "send_tx_hash": "27AE870E53064B1E1F7375DF82464C39FACEE89720CC39FBD2B574138220A7FA",
+  "tweet_tx_hash": "E71D31B7047F63D264EE401F10192C2FD8EE4025200F433987BAF4CB43BA0B96",
+  "withdraw_rewards_hash": "84A0859BFE02D5ACC59B6FFBEF26A78DE739B3D481F9E9A1EC5CE8C29E0B1780",
+  "redelegate_hash": "AF24E4F381B9BF0CA9EDB809C16ADC46ADB032D38647AA549BC30591DB57055A"
+}
