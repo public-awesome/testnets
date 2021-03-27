@@ -1,0 +1,61 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "UbikCapital",
+          "identity": "",
+          "website": "",
+          "security_contact": "",
+          "details": ""
+        },
+        "commission": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "min_self_delegation": "1",
+        "delegator_address": "stars1wcmxtq3pkta6fp800xgjlklky9nvgyj30u9d5s",
+        "validator_address": "starsvaloper1wcmxtq3pkta6fp800xgjlklky9nvgyj3yz3e0g",
+        "pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "L6WsAcSxhqWpSxRMZD8iJAOIVSnWCfD/ynA5rjZse6k="
+        },
+        "value": {
+          "denom": "ustarx",
+          "amount": "90000000"
+        }
+      }
+    ],
+    "memo": "9d48a49dafbec38b03d245f1a22a8ec2a75269fb@173.212.196.19:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "Ay6PB71Yr7+xmTyY4hwzij/cU4xWMrxpLhPvWYQKUfEK"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": [
+    "I4Sdaf7aWE0GEieFQ+dDiHR1h9aaZ67blbTbY6+pmMg7t0wVBu8QUfAGC6Xf9RPYLWRfUDrmzYZz9Qgj0sk3Og=="
+  ]
+}
