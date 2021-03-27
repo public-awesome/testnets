@@ -4,23 +4,23 @@
       {
         "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
         "description": {
-          "moniker": "Wanderer",
+          "moniker": "orisica",
           "identity": "",
           "website": "",
           "security_contact": "",
           "details": ""
         },
         "commission": {
-          "rate": "0.800000000000000000",
-          "max_rate": "1.000000000000000000",
-          "max_change_rate": "1.000000000000000000"
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
         },
         "min_self_delegation": "1",
-        "delegator_address": "stars15cq9zjhg2uuf472xgysdgjqgwdw06hzcyskj8e",
-        "validator_address": "starsvaloper15cq9zjhg2uuf472xgysdgjqgwdw06hzc0wzxup",
+        "delegator_address": "stars1nvwat2rkse49svejw08v75r078d4zkmts46xer",
+        "validator_address": "starsvaloper1nvwat2rkse49svejw08v75r078d4zkmtmtwjzm",
         "pubkey": {
           "@type": "/cosmos.crypto.ed25519.PubKey",
-          "key": "WLt3lz8OrbC40mGArmMclVl5JLCBcNLWajj59GlTtX0="
+          "key": "+YIa/fjD6DU1JfsexjpBsKSlrun8IzbmwWFRWSJSQZA="
         },
         "value": {
           "denom": "ustarx",
@@ -28,7 +28,7 @@
         }
       }
     ],
-    "memo": "cf1ea845d15822adf4c87df2ba60b1f6cd40ce1d@0.0.0.0:26656",
+    "memo": "9de4f29b13ba134d146af7bbff6dd45bb675db4b@95.216.157.55:26656",
     "timeout_height": "0",
     "extension_options": [],
     "non_critical_extension_options": []
@@ -38,7 +38,7 @@
       {
         "public_key": {
           "@type": "/cosmos.crypto.secp256k1.PubKey",
-          "key": "A2dCzylbiLYz2R0QnRxUtMHuA+x6WbQwUQg6kg991ttx"
+          "key": "AnixmMEpnvZM61C1PAfJgq075Cc0g5XIFnBxr3hOR9Kq"
         },
         "mode_info": {
           "single": {
@@ -56,6 +56,6 @@
     }
   },
   "signatures": [
-    "PhaTCKo1fHWEvZ4ScJ259st7EYPticLnu5jOha7nBKY6Rq4VTQ7+1opFnqwhagLatP4tiz9u90Xk+3U5gghKJA=="
+    "OMFeMPDjzwcdE61NMJlYEBBF4vlTIrswVjWQlbR5PBxXIVKUywzl/VmvNaEQs92DrL4Cchb0LGKeR9WfyqQa5Q=="
   ]
 }
