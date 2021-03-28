@@ -1,0 +1,8 @@
+{
+  "operator_address": "starsvaloper...",
+  "moniker": "my_monyker",
+  "send_tx_hash": "hash",
+  "tweet_tx_hash": "hash",
+  "withdraw_rewards_hash": "hash",
+  "redelegate_hash": "hash"
+}
