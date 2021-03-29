@@ -2,13 +2,15 @@
 
 ## TLDR
 
-Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/) (Coming soon)
+Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/)
 
 Binaries: [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
 
-Genesis file: to be released
+Genesis file: [genesis.json](https://github.com/public-awesome/testnets/releases/download/bellatrix-1/genesis.json)
 
 Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656`
+
+Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
 
 ## Minimum hardware requirements
 
@@ -159,7 +161,7 @@ Verify you have the correct genesis file:
 
 ```sh
 > shasum -a 256 ~/.starsd/config/genesis.json
-6766623e50ac9ca8585d4e202b7ef627e85210e7fd10da633c1fb04d381e0bb1  genesis.json
+9f97fdbdcc358bb3cf2a32ddad51c7172a2c0fee0023f56cd69457c8500804cc  genesis.json
 ```
 
 Add seed nodes in `config.toml`.
