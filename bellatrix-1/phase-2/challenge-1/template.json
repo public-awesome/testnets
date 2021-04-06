@@ -1,0 +1,8 @@
+{
+  "operator_address": "starsvaloper...",
+  "moniker": "<validator_moniker>",
+  "post_tx_hash": "hash",
+  "upvote_tx_hash": "hash",
+  "upvote_2_tx_hash": "hash",
+  "stake_tx_hash": "hash"
+}
