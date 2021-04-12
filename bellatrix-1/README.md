@@ -12,6 +12,8 @@ Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.
 
 Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
 
+## Challenges
+- [Phase-1 Challenge 1](https://github.com/public-awesome/testnets/blob/master/bellatrix-1/challenge-1/README.md)
 ## Minimum hardware requirements
 
 - 2GB RAM
