@@ -1,8 +1,8 @@
 {
-  "operator_address": "starsvaloper...",
-  "moniker": "<validator_moniker>",
-  "post_tx_hash": "hash",
-  "upvote_tx_hash": "hash",
-  "upvote_2_tx_hash": "hash",
-  "stake_tx_hash": "hash"
+	"operator_address": "starsvaloper13pfjnarjxxtcaprmcfr5f90r32ytyj47ujypah",
+	"moniker": "liray-validator",
+	"post_tx_hash": "1265133F22D2D5C25B9670CA332A451706A84DED50BF18A58C6020C243487909",
+	"upvote_tx_hash": "558935593DEE74568FBC24BD6A3DEE85990DDF1E706F86E0077",
+	"upvote_2_tx_hash": "E0BFD824B0D70C974A9C145C441832FFF0BF3F339889D30D926D9186EA3D71E0",
+	"stake_tx_hash": "8C2336D7817EE7DF5F6ED003A7D53440B17BBA4552918F4B96A6A5EE219C4ACE"
 }
