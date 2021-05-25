@@ -4,14 +4,15 @@ CONFIG=~/.starsd/config
 NETWORK=cygnusx-1
 GENESIS_TIME=2021-05-25T00:44:44.536813Z
 START_TIME=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%S" ${GENESIS_TIME:0:19} +%s)
-ONE_YEAR=31556926
 ONE_HOUR=3600
+ONE_DAY=$(($ONE_HOUR * 24))
+ONE_YEAR=$(($ONE_DAY * 365.24))
 
 rm -rf $CONFIG/gentx && mkdir $CONFIG/gentx
 starsd init stargaze --chain-id=$NETWORK --stake-denom ustarx --overwrite
 
-vesting_start_time=$(($START_TIME + $ONE_HOUR))
-vesting_end_time=$(($vesting_start_time + $ONE_HOUR))
+vesting_start_time=$(($START_TIME + $ONE_DAY))
+vesting_end_time=$(($vesting_start_time + $ONE_DAY))
 
 starsd add-genesis-account stars15zx6hhjcnnnwt3nlf49gae3dd5n4vkjxef6gq2 333333333333334ustarx \
     --vesting-amount 333333332333334ustarx \
