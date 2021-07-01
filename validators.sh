@@ -2,7 +2,7 @@
 
 NETWORK=cygnusx-1
 CONFIG=~/.starsd/config
-INITIAL_COINS=100000000ustarx
+INITIAL_COINS=500000000000ustarx
 
 for i in $NETWORK/gentx/*.json; do
   echo $i
