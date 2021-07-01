@@ -2,18 +2,20 @@
 
 ## TLDR
 
-Block explorer: [https://explorer.bellatrix-1.publicawesome.dev/](https://explorer.bellatrix-1.publicawesome.dev/)
+Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer.cygnusx-1.publicawesome.dev/)
 
 Binaries: [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
 
-Genesis file: [genesis.json](https://github.com/public-awesome/testnets/releases/download/bellatrix-1/genesis.json)
+Genesis file: [genesis.json](https://github.com/public-awesome/networks/releases/download/cygnusx-1/genesis.json)
 
-Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656`
+Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.cygnusx-1.publicawesome.dev:36656`
 
 Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
 
 ## Challenges
-- [Phase-1 Challenge 1](https://github.com/public-awesome/testnets/blob/master/bellatrix-1/challenge-1/README.md)
+
+- [Phase-1 Challenge 1](https://github.com/public-awesome/networks/blob/master/cygnusx-1/challenge-1/README.md)
+
 ## Minimum hardware requirements
 
 - 2GB RAM
@@ -91,7 +93,7 @@ Below are the instructions to generate & submit your genesis transaction
    chain-id
 
    ```sh
-   > starsd init <moniker-name> --chain-id=bellatrix-1
+   > starsd init <moniker-name> --chain-id=cygnusx-1
    ```
 
 2. Create a local key pair
@@ -110,7 +112,7 @@ Below are the instructions to generate & submit your genesis transaction
 4. Create the gentx
 
    ```sh
-   > starsd gentx <key-name> 90000000ustarx --chain-id=bellatrix-1
+   > starsd gentx <key-name> 90000000ustarx --chain-id=cygnusx-1
    ```
 
    If all goes well, you will see a message similar to the following:
@@ -127,25 +129,25 @@ Below are the instructions to generate & submit your genesis transaction
 > 2. Only one gentx per Github account is allowed
 > 3. We reserve the right to exercise our best judgement to protect the network against Sybil attacks. Preference will be given to validators with a proven track record of validating for other networks.
 
-Submit your gentx in a PR [here](https://github.com/public-awesome/testnets)
+Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 
-- Fork [the testnets repo](https://github.com/public-awesome/testnets) into your Github account
+- Fork [the networks repo](https://github.com/public-awesome/networks) into your Github account
 
 - Clone your repo using
 
   ```sh
-  > git clone https://github.com/<your-github-username>/testnets
+  > git clone https://github.com/<your-github-username>/networks
   ```
 
-- Copy the generated gentx json file to `<repo_path>/bellatrix-1/gentx/`
+- Copy the generated gentx json file to `<repo_path>/cygnusx-1/gentx/`
 
   ```sh
   > cd testnets
-  > cp ~/.starsd/config/gentx/gentx*.json ./bellatrix-1/gentx/
+  > cp ~/.starsd/config/gentx/gentx*.json ./cygnusx-1/gentx/
   ```
 
 - Commit and push to your repo
-- Create a PR onto https://github.com/public-awesome/testnets
+- Create a PR onto https://github.com/public-awesome/networks
 
 ### Start your validator node
 
@@ -156,7 +158,7 @@ Once after the genesis is released (_MAR 22 2021 1600 UTC_), follow the instruct
 Fetch `genesis.json` into `starsd`'s `config` directory.
 
 ```sh
-> curl https://raw.githubusercontent.com/public-awesome/testnets/master/bellatrix-1/genesis.json > $HOME/.starsd/config/genesis.json
+> curl https://raw.githubusercontent.com/public-awesome/networks/master/cygnusx-1/genesis.json > $HOME/.starsd/config/genesis.json
 ```
 
 Verify you have the correct genesis file:
@@ -176,7 +178,7 @@ Find the following section and add the seed nodes.
 
 ```sh
 # Comma separated list of seed nodes to connect to
-seeds = "c36b75183e4047fb788dcc526e751439a6fda1f0@seed.bellatrix-1.publicawesome.dev:36656"
+seeds = "c36b75183e4047fb788dcc526e751439a6fda1f0@seed.cygnusx-1.publicawesome.dev:36656"
 ```
 
 ```sh
@@ -248,7 +250,7 @@ This section applies to those who are looking to join the testnet post genesis.
 1. Init Chain and start your node
 
    ```sh
-   > starsd init <moniker-name> --chain-id=bellatrix-1 --stake-denom=ustarx
+   > starsd init <moniker-name> --chain-id=cygnusx-1 --stake-denom=ustarx
    ```
 
    After that, please follow all the instructions from [Start your validator node](#start-your-validator-node)
@@ -264,7 +266,7 @@ This section applies to those who are looking to join the testnet post genesis.
 
    ```sh
    $ starsd tx staking create-validator \
-   --amount 9000000ustarx \
+   --amount 250000000000ustarx \
    --commission-max-change-rate "0.1" \
    --commission-max-rate "0.20" \
    --commission-rate "0.1" \
@@ -272,7 +274,7 @@ This section applies to those who are looking to join the testnet post genesis.
    --details "validators write bios too" \
    --pubkey=$(starsd tendermint show-validator) \
    --moniker <your_moniker> \
-   --chain-id bellatrix-1 \
+   --chain-id cygnusx-1 \
    --gas-prices 0.025ustarx \
    --from <key-name>
    ```
