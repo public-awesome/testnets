@@ -13,7 +13,7 @@
 
 ### Install Stargaze
 
-### Install Go
+#### Install Go
 
 Stargaze is built using Go and requires Go version 1.15+. In this example, we will be installing Go on Ubuntu 20.04:
 
