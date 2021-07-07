@@ -8,39 +8,22 @@
 
 ## Software requirements
 
-Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
-
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
+- Latest version : [v0.8.1](https://github.com/public-awesome/stargaze/releases/tag/v0.8.1)
 
 ### Install Stargaze
 
-You can install Stargaze by downloading the binary (easiest), or compiling from source.
+#### Build from source
 
-#### Option 1: Download binary
-
-1. Download the binary for your platform: [releases](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
-2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
-
-i.e:
-
-```sh
-# libwasmvm.so is needed by cgo bindings
-sudo wget https://github.com/CosmWasm/wasmvm/raw/v0.13.0/api/libwasmvm.so -O /lib/libwasmvm.so
-wget https://github.com/public-awesome/stargaze/releases/download/v0.6.0/stargaze_0.6.0_linux_amd64.tar.gz
-sudo tar -C /usr/local/bin -zxvf stargaze_0.6.0_linux_amd64.tar.gz
-```
-
-#### Option 2: Build from source
-
-Requires [Go version v1.15+](https://golang.org/doc/install).
+Requires [Go version v1.16+](https://golang.org/doc/install).
 
 ```sh
 mkdir -p $GOPATH/src/github.com/public-awesome
 cd $GOPATH/src/github.com/public-awesome
 git clone https://github.com/public-awesome/stargaze && cd stargaze
 git fetch origin --tags
-git checkout v0.6.0
+git checkout v0.8.1
+make build && make install
 ```
 
 #### Verify installation
@@ -56,10 +39,10 @@ It will display the version of `starsd` currently installed:
 ```sh
 name: stargaze
 server_name: starsd
-version: 0.6.0
-commit: 3f7bed1cd9384eeca878277e4dcb92d1aa3aea1b
-build_tags: netgo,faucet
-go: go version go1.15.8 linux/amd64
+version: 0.8.1
+commit: 7c5d8ed4379158ea6045697c55cda288efce8eff
+build_tags: netgo
+go: go version go1.16.5 darwin/amd64
 ```
 
 ## Setup validator node
@@ -72,7 +55,9 @@ Below are the instructions to generate and submit your genesis transaction.
    chain-id
 
    ```sh
-   starsd init <moniker-name> --chain-id=cygnusx-1
+   starsd config chain-id cygnusx-1
+   # moniker is the name of your node
+   starsd init <moniker>
    ```
 
 2. Create a local key pair
@@ -114,7 +99,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 - Clone your repo using
 
   ```sh
-  git clone https://github.com/<your-github-username>/networks
+  git clone https://github.com/<github-username>/networks
   ```
 
 - Copy the generated gentx json file to `<repo_path>/cygnusx-1/gentx/`
@@ -127,90 +112,4 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 - Commit and push to your repo
 - Create a PR onto https://github.com/public-awesome/networks
 
-#### Genesis & seeds
-
-Fetch `genesis.json` into `starsd`'s `config` directory.
-
-```sh
-curl https://raw.githubusercontent.com/public-awesome/networks/master/cygnusx-1/genesis.json > $HOME/.starsd/config/genesis.json
-```
-
-Verify you have the correct genesis file:
-
-```sh
-shasum -a 256 ~/.starsd/config/genesis.json
-[TBD]  genesis.json
-```
-
-Add seed nodes in `config.toml`.
-
-```sh
-vi $HOME/.starsd/config/config.toml
-```
-
-Find the following section and add the seed nodes.
-
-```sh
-# [TBD] Comma separated list of seed nodes to connect to
-seeds = ""
-```
-
-```sh
-# Comma separated list of persistent peers to connect to
-persistent_peers = ""
-```
-
-#### Set validator gas fees
-
-You can set the minimum gas prices for transactions to be accepted into your node's mempool. This sets a lower bound on gas prices, preventing spam. Stargaze will launch accepting 0 gas fees to bootstrap the network.
-
-```sh
-vi $HOME/.starsd/config/app.toml
-```
-
-```sh
-minimum-gas-prices = ""
-```
-
-#### Start node automatically (Linux only)
-
-Create a `systemd` service
-
-```sh
-sudo vi /etc/systemd/system/starsd.service
-```
-
-Copy and paste the following and update `<user>` and `<GO_PATH>`:
-
-```sh
-[Unit]
-Description=starsd
-After=network-online.target
-
-[Service]
-User=<user>
-ExecStart=<GO_PATH>/bin/starsd start
-Restart=always
-RestartSec=3
-LimitNOFILE=4096
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```sh
-sudo systemctl enable starsd
-sudo systemctl start starsd
-```
-
-Check node status
-
-```sh
-starsd status
-```
-
-Check logs
-
-```sh
-journalctl -u starsd -f
-```
+✨ Congrats! You have done everything you need to participate in the testnet. Now just hang tight for further instructions on starting your node when the network starts (7/13/2021 1600 UTC).
