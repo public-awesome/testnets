@@ -6,8 +6,11 @@ name: default-build
 steps:
   - name: check
     image: publicawesome/networks-check
+    environment:
+      github_token:
+        from_secret: github_token
 ---
 kind: signature
-hmac: bdb16f48412ef5dc136d3c5dc49ab34d3bb50ab1d2b319e1df99fe7f0830081d
+hmac: 24a00e7d5c5e9a3d1988f3f45a4e69d6d609a127cd4a2755b688d16502ed4e7c
 
 ...
