@@ -9,8 +9,12 @@ steps:
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
+trigger:
+  event:
+    - pull_request
+
 ---
 kind: signature
-hmac: 19f68084c85f2522c29137bcd17ab55994fb2d557318ac7c28d5984d21b48cc0
+hmac: f221b3fc21cc9cf950232a043c2844a97f2f94be69c3f0da23c0b1127bae8edf
 
 ...
