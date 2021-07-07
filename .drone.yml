@@ -1,0 +1,15 @@
+---
+kind: pipeline
+type: docker
+name: default-build
+
+steps:
+  - name: fetch
+    image: alpine/git
+    commands:
+      - git fetch --tags
+---
+kind: signature
+hmac: afdc26bbade65fe82bb57267ec9b557f032b3e1845f5e7fb07997467bbf88b24
+
+...
