@@ -1,5 +1,7 @@
 # Stargaze Cygnus X-1 Testnet Instructions
 
+![Alt Text](https://scitechdaily.com/images/Cygnus-X-1-System.gif)
+
 ## Minimum hardware requirements
 
 - 2x CPUs
