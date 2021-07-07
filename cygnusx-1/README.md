@@ -97,8 +97,8 @@ Below are the instructions to generate and submit your genesis transaction.
     ```sh
     starsd add-genesis-account $(starsd keys show <key-name> -a) 1000000000000ustarx \
         --vesting-amount 1000000000000ustarx \
-        --vesting-start-time 1626206400 \
-        --vesting-end-time 1626292800
+        --vesting-start-time 1626292800 \
+        --vesting-end-time 1626379200
     ```
 
 4. Generate the genesis transaction (gentx) that submits your validator info to the chain.
