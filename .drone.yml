@@ -7,10 +7,10 @@ steps:
   - name: check
     image: publicawesome/networks-check
     environment:
-      github_token:
+      GITHUB_TOKEN:
         from_secret: github_token
 ---
 kind: signature
-hmac: 24a00e7d5c5e9a3d1988f3f45a4e69d6d609a127cd4a2755b688d16502ed4e7c
+hmac: 19f68084c85f2522c29137bcd17ab55994fb2d557318ac7c28d5984d21b48cc0
 
 ...
