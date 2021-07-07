@@ -9,12 +9,16 @@ steps:
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
+  - name: collect
+    image: publicawesome/stargaze:develop
+    commands:
+      - sh ./check.sh
 trigger:
   event:
     - pull_request
 
 ---
 kind: signature
-hmac: f221b3fc21cc9cf950232a043c2844a97f2f94be69c3f0da23c0b1127bae8edf
+hmac: 74faa35fc712dd6a99de2f8bfa716b1775485b116b9d549810cfcee1ffbef285
 
 ...
