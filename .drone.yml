@@ -4,12 +4,10 @@ type: docker
 name: default-build
 
 steps:
-  - name: fetch
-    image: alpine/git
-    commands:
-      - git fetch --tags
+  - name: check
+    image: publicawesome/networks-check
 ---
 kind: signature
-hmac: afdc26bbade65fe82bb57267ec9b557f032b3e1845f5e7fb07997467bbf88b24
+hmac: bdb16f48412ef5dc136d3c5dc49ab34d3bb50ab1d2b319e1df99fe7f0830081d
 
 ...
