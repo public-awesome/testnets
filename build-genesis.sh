@@ -67,4 +67,4 @@ done
 starsd collect-gentxs
 starsd validate-genesis
 
-cp ./starsd/config/genesis.json $CHAIN_ID
+cp ~/.starsd/config/genesis.json $CHAIN_ID
