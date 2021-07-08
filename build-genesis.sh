@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DENOM=$DENOM
+DENOM=ustarx
 CHAIN_ID=cygnusx-1
 ONE_HOUR=3600
 ONE_DAY=$(($ONE_HOUR * 24))
@@ -22,7 +22,7 @@ if ! [ -f genesis.json ]; then
     curl -O https://archive.interchain.io/4.0.2/genesis.json
 fi
 starsd export-airdrop-snapshot uatom genesis.json snapshot.json
-starsd init testmoniker --stake-denom $DENOM --chain-id $CHAIN_ID
+starsd init testmoniker --chain-id $CHAIN_ID
 starsd prepare-genesis testnet $CHAIN_ID
 starsd import-genesis-accounts-from-snapshot snapshot.json
 
@@ -57,7 +57,8 @@ starsd add-genesis-account stars1wppujuuqrv52atyg8uw3x779r8w72ehrr5a4yx 50000000
 
 echo "Processing validators..."
 mkdir -p ~/.starsd/config/gentx
-for i in $NETWORK/gentx/*.json; do
+# for i in $NETWORK/gentx/*.json; do
+for i in bellatrix-1/gentx/*.json; do
     echo $i
     starsd add-genesis-account $(jq -r '.body.messages[0].delegator_address' $i) $VALIDATOR_COINS \
         --vesting-amount $VALIDATOR_COINS \
