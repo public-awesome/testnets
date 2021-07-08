@@ -130,7 +130,7 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 - Copy the generated gentx json file to `<repo_path>/cygnusx-1/gentx/`
 
   ```sh
-  cd testnets
+  cd networks
   cp ~/.starsd/config/gentx/gentx*.json ./cygnusx-1/gentx/
   ```
 
