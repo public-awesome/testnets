@@ -1,11 +1,11 @@
 #!/bin/bash
 
-DENOM=ustarx
+DENOM=$DENOM
 CHAIN_ID=cygnusx-1
 ONE_HOUR=3600
 ONE_DAY=$(($ONE_HOUR * 24))
 ONE_YEAR=$(($ONE_DAY * 365))
-VALIDATOR_COINS=1000000000000ustarx
+VALIDATOR_COINS=1000000000000$DENOM
 
 if [ "$1" == "mainnet" ]
 then
@@ -37,20 +37,21 @@ fi
 vesting_start_time=$(($GENESIS_UNIX_TIME + $LOCKUP))
 vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
-starsd add-genesis-account stars12yxedm78tpptyhhasxrytyfyj7rg7dcqfgrdk4 16666666666667ustarx \
-    --vesting-amount 16666666666667ustarx \
+starsd add-genesis-account stars1s4ckh9405q0a3jhkwx9wkf9hsjh66nmuu53dwe 350000000000000$DENOM
+starsd add-genesis-account stars12yxedm78tpptyhhasxrytyfyj7rg7dcqfgrdk4 16666666666667$DENOM \
+    --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
-starsd add-genesis-account stars1nek5njjd7uqn5zwf5zyl3xhejvd36er3qzp6x3 16666666666667ustarx \
-    --vesting-amount 16666666666667ustarx \
+starsd add-genesis-account stars1nek5njjd7uqn5zwf5zyl3xhejvd36er3qzp6x3 16666666666667$DENOM \
+    --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
-starsd add-genesis-account stars1avlcqcn4hsxrds2dgxmgrj244hu630kfl89vrt 16666666666667ustarx \
-    --vesting-amount 16666666666667ustarx \
+starsd add-genesis-account stars1avlcqcn4hsxrds2dgxmgrj244hu630kfl89vrt 16666666666667$DENOM \
+    --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
-starsd add-genesis-account stars1wppujuuqrv52atyg8uw3x779r8w72ehrr5a4yx 50000000000000ustarx \
-    --vesting-amount 50000000000000ustarx \
+starsd add-genesis-account stars1wppujuuqrv52atyg8uw3x779r8w72ehrr5a4yx 50000000000000$DENOM \
+    --vesting-amount 50000000000000$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
 
