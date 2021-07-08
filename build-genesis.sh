@@ -37,10 +37,6 @@ fi
 vesting_start_time=$(($GENESIS_UNIX_TIME + $LOCKUP))
 vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
-starsd add-genesis-account stars19vcu4svzydq79gqk504pg0fjn2nq4x03tvcz0p 100000000000000ustarx \
-    --vesting-amount 100000000000000ustarx \
-    --vesting-start-time $vesting_start_time \
-    --vesting-end-time $vesting_end_time
 starsd add-genesis-account stars12yxedm78tpptyhhasxrytyfyj7rg7dcqfgrdk4 16666666666667ustarx \
     --vesting-amount 16666666666667ustarx \
     --vesting-start-time $vesting_start_time \
