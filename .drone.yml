@@ -1,0 +1,24 @@
+---
+kind: pipeline
+type: docker
+name: default-build
+
+steps:
+  - name: check
+    image: publicawesome/networks-check
+    environment:
+      GITHUB_TOKEN:
+        from_secret: github_token
+  - name: collect
+    image: publicawesome/stargaze:develop
+    commands:
+      - sh ./check.sh
+trigger:
+  event:
+    - pull_request
+
+---
+kind: signature
+hmac: 74faa35fc712dd6a99de2f8bfa716b1775485b116b9d549810cfcee1ffbef285
+
+...
