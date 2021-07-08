@@ -29,7 +29,11 @@ starsd import-genesis-accounts-from-snapshot snapshot.json
 echo "Adding vesting accounts..."
 GENESIS_TIME=$(jq '.genesis_time' ~/.starsd/config/genesis.json | tr -d '"')
 echo "Genesis time is $GENESIS_TIME"
-GENESIS_UNIX_TIME=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%S" ${GENESIS_TIME:0:19} +%s)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    GENESIS_UNIX_TIME=$(TZ=UTC gdate "+%s" -d $GENESIS_TIME)
+else
+    GENESIS_UNIX_TIME=$(TZ=UTC date "+%s" -d $GENESIS_TIME)
+fi
 vesting_start_time=$(($GENESIS_UNIX_TIME + $LOCKUP))
 vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
