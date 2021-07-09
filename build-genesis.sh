@@ -38,7 +38,7 @@ vesting_start_time=$(($GENESIS_UNIX_TIME + $LOCKUP))
 vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
 starsd add-genesis-account stars1s4ckh9405q0a3jhkwx9wkf9hsjh66nmuu53dwe 350000000000000$DENOM
-starsd add-genesis-account stars13nh557xzyfdm6csyp0xslu939l753sdlgdc2q0 250000000000000$DENOM
+# starsd add-genesis-account stars13nh557xzyfdm6csyp0xslu939l753sdlgdc2q0 250000000000000$DENOM
 starsd add-genesis-account stars12yxedm78tpptyhhasxrytyfyj7rg7dcqfgrdk4 16666666666667$DENOM \
     --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
