@@ -2,6 +2,18 @@
 
 ![Alt Text](https://scitechdaily.com/images/Cygnus-X-1-System.gif)
 
+## TLDR
+
+Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer.cygnusx-1.publicawesome.dev/)
+
+Binaries: Pending
+
+Genesis file: Pending
+
+Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
+
+Peers: Pending
+
 ## Minimum hardware requirements
 
 - 2x CPUs
