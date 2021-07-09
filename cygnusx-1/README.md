@@ -1,63 +1,68 @@
 # Stargaze Cygnus X-1 Testnet Instructions
 
+![Alt Text](https://scitechdaily.com/images/Cygnus-X-1-System.gif)
+
 ## TLDR
 
 Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer.cygnusx-1.publicawesome.dev/)
 
-Binaries: [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
+Binaries: Pending
 
-Genesis file: [genesis.json](https://github.com/public-awesome/networks/releases/download/cygnusx-1/genesis.json)
+Genesis file: Pending
 
-Seeds: `c36b75183e4047fb788dcc526e751439a6fda1f0@seed.cygnusx-1.publicawesome.dev:36656`
+Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
 
-Peers: [peers](https://www.notion.so/Stargaze-Bellatrix-Testnet-Seeds-Peers-3f0cd9e7c76e49c0859778690f514d5c)
-
-## Challenges
-
-- [Phase-1 Challenge 1](https://github.com/public-awesome/networks/blob/master/cygnusx-1/challenge-1/README.md)
+Peers: Pending
 
 ## Minimum hardware requirements
 
-- 2GB RAM
-- 25GB of disk space
-- 1.4 GHz CPU
+- 2x CPUs
+- 4GB RAM
+- 50GB+ of disk space
 
 ## Software requirements
 
-Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
-
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v0.6.0](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0)
+- Latest version : [v0.8.1](https://github.com/public-awesome/stargaze/releases/tag/v0.8.1)
 
 ### Install Stargaze
 
-You can install Stargaze by downloading the binary (easiest), or compiling from source.
+#### Install Go
 
-#### Option 1: Download binary
-
-1. Download the binary for your platform: [releases](https://github.com/public-awesome/stargaze/releases/tag/v0.6.0).
-2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
-
-i.e:
+Stargaze is built using Go and requires Go version 1.15+. In this example, we will be installing Go on Ubuntu 20.04:
 
 ```sh
-# libwasmvm.so is needed by cgo bindings
-> sudo wget https://github.com/CosmWasm/wasmvm/raw/v0.13.0/api/libwasmvm.so -O /lib/libwasmvm.so
-> wget https://github.com/public-awesome/stargaze/releases/download/v0.6.0/stargaze_0.6.0_linux_amd64.tar.gz
-> sudo tar -C /usr/local/bin -zxvf stargaze_0.6.0_linux_amd64.tar.gz
+# First remove any existing old Go installation
+sudo rm -rf /usr/local/go
+
+# Install the latest version of Go using this helpful script 
+curl https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
+
+# Update environment variables to include go
+cat <<'EOF' >>$HOME/.profile
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+EOF
+source $HOME/.profile
 ```
 
-#### Option 2: Build from source
-
-Requires [Go version v1.15+](https://golang.org/doc/install).
+To verify that Go is installed:
 
 ```sh
-> mkdir -p $GOPATH/src/github.com/public-awesome
-> cd $GOPATH/src/github.com/public-awesome
-> git clone https://github.com/public-awesome/stargaze && cd stargaze
-> git fetch origin --tags
-> git checkout v0.6.0
-> FAUCET_ENABLED=true make install
+go version
+# Should return go version go1.16.4 linux/amd64
+```
+
+#### Build Stargaze from source
+
+```sh
+mkdir -p $GOPATH/src/github.com/public-awesome
+cd $GOPATH/src/github.com/public-awesome
+git clone https://github.com/public-awesome/stargaze && cd stargaze
+git fetch origin --tags
+git checkout v0.8.1
+make build && make install
 ```
 
 #### Verify installation
@@ -65,27 +70,23 @@ Requires [Go version v1.15+](https://golang.org/doc/install).
 To verify if the installation was successful, execute the following command:
 
 ```sh
-> starsd version --long
+starsd version --long
 ```
 
-It will display the version of starsd currently installed:
+It will display the version of `starsd` currently installed:
 
 ```sh
 name: stargaze
 server_name: starsd
-version: 0.6.0
-commit: 3f7bed1cd9384eeca878277e4dcb92d1aa3aea1b
-build_tags: netgo,faucet
-go: go version go1.15.8 linux/amd64
+version: 0.8.1
+commit: 7c5d8ed4379158ea6045697c55cda288efce8eff
+build_tags: netgo
+go: go version go1.16.5 darwin/amd64
 ```
-
-NOTE: Make sure `build_tags` includes "faucet", which is required for testnet.
 
 ## Setup validator node
 
-If you are looking to join the testnet post genesis time (_MAR 23 2021 1600 UTC_), skip to [Create Testnet Validator](#create-testnet-validator)
-
-Below are the instructions to generate & submit your genesis transaction
+Below are the instructions to generate and submit your genesis transaction.
 
 ### Generate genesis transaction (gentx)
 
@@ -93,26 +94,33 @@ Below are the instructions to generate & submit your genesis transaction
    chain-id
 
    ```sh
-   > starsd init <moniker-name> --chain-id=cygnusx-1
+   starsd config chain-id cygnusx-1
+   # moniker is the name of your node
+   starsd init <moniker>
    ```
 
 2. Create a local key pair
 
    ```sh
-   > starsd keys add <key-name>
+   starsd keys add <key-name>
    ```
 
 3. Add your account to your local genesis file with a given amount and the key you
-   just created. Use only `100000000ustarx`, other amounts will be ignored. STARX is testnet STAR.
+   just created. Use only `1000000000000ustarx`, other amounts will be ignored.
+
+    ```sh
+    starsd add-genesis-account $(starsd keys show <key-name> -a) 1000000000000ustarx \
+        --vesting-amount 1000000000000ustarx \
+        --vesting-start-time 1626292800 \
+        --vesting-end-time 1626379200
+    ```
+
+4. Generate the genesis transaction (gentx) that submits your validator info to the chain.
+   The amount here is how much of your own funds you want to delegate to your validator (self-delegate).
+   Start with 50% of your total (500000000000ustarx). You can always delegate the rest later.
 
    ```sh
-   > starsd add-genesis-account $(starsd keys show <key-name> -a) 100000000ustarx
-   ```
-
-4. Create the gentx
-
-   ```sh
-   > starsd gentx <key-name> 90000000ustarx --chain-id=cygnusx-1
+   starsd gentx <key-name> 500000000000ustarx --chain-id=cygnusx-1
    ```
 
    If all goes well, you will see a message similar to the following:
@@ -123,12 +131,6 @@ Below are the instructions to generate & submit your genesis transaction
 
 ### Submit genesis transaction
 
-> NOTE: To prevent malicious validators, and to ensure a fair and decentralized launch, the following rules will be enforced:
->
-> 1. Github accounts must be at least 6 months old and have history; accounts with little activity may not be accepted.
-> 2. Only one gentx per Github account is allowed
-> 3. We reserve the right to exercise our best judgement to protect the network against Sybil attacks. Preference will be given to validators with a proven track record of validating for other networks.
-
 Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 
 - Fork [the networks repo](https://github.com/public-awesome/networks) into your Github account
@@ -136,147 +138,17 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 - Clone your repo using
 
   ```sh
-  > git clone https://github.com/<your-github-username>/networks
+  git clone https://github.com/<github-username>/networks
   ```
 
 - Copy the generated gentx json file to `<repo_path>/cygnusx-1/gentx/`
 
   ```sh
-  > cd testnets
-  > cp ~/.starsd/config/gentx/gentx*.json ./cygnusx-1/gentx/
+  cd networks
+  cp ~/.starsd/config/gentx/gentx*.json ./cygnusx-1/gentx/
   ```
 
 - Commit and push to your repo
 - Create a PR onto https://github.com/public-awesome/networks
 
-### Start your validator node
-
-Once after the genesis is released (_MAR 22 2021 1600 UTC_), follow the instructions below to start your validator node.
-
-#### Genesis & seeds
-
-Fetch `genesis.json` into `starsd`'s `config` directory.
-
-```sh
-> curl https://raw.githubusercontent.com/public-awesome/networks/master/cygnusx-1/genesis.json > $HOME/.starsd/config/genesis.json
-```
-
-Verify you have the correct genesis file:
-
-```sh
-> shasum -a 256 ~/.starsd/config/genesis.json
-9f97fdbdcc358bb3cf2a32ddad51c7172a2c0fee0023f56cd69457c8500804cc  genesis.json
-```
-
-Add seed nodes in `config.toml`.
-
-```sh
-> vi $HOME/.starsd/config/config.toml
-```
-
-Find the following section and add the seed nodes.
-
-```sh
-# Comma separated list of seed nodes to connect to
-seeds = "c36b75183e4047fb788dcc526e751439a6fda1f0@seed.cygnusx-1.publicawesome.dev:36656"
-```
-
-```sh
-# Comma separated list of persistent peers to connect to
-persistent_peers = ""
-```
-
-#### Set validator gas fees
-
-You can set the minimum gas prices for transactions to be accepted into your node's mempool. This sets a lower bound on gas prices, preventing spam. Stargaze can accept gas in _any_ currency. To accept both ATOM and STARX for example, set `minimum-gas-prices` in `app.toml`.
-
-```sh
-> vi $HOME/.starsd/config/app.toml
-```
-
-```sh
-minimum-gas-prices = "0.025ustarx"
-```
-
-#### Start node automatically (Linux only)
-
-Create a `systemd` service
-
-```sh
-> sudo vi /etc/systemd/system/starsd.service
-```
-
-Copy and paste the following and update `<your_username>` and `<go_workspace>`:
-
-```sh
-[Unit]
-Description=starsd
-After=network-online.target
-
-[Service]
-User=<your_username>
-ExecStart=/home/<your_username>/<go_workspace>/bin/starsd start
-Restart=always
-RestartSec=3
-LimitNOFILE=4096
-
-[Install]
-WantedBy=multi-user.target
-```
-
-**This assumes `$HOME/go_workspace` to be your Go workspace. Your actual workspace directory may vary.**
-
-```sh
-> sudo systemctl enable starsd
-> sudo systemctl start starsd
-```
-
-Check node status
-
-```sh
-> starsd status
-```
-
-Check logs
-
-```sh
-> journalctl -u starsd -f
-```
-
-## Create testnet validator
-
-This section applies to those who are looking to join the testnet post genesis.
-
-1. Init Chain and start your node
-
-   ```sh
-   > starsd init <moniker-name> --chain-id=cygnusx-1 --stake-denom=ustarx
-   ```
-
-   After that, please follow all the instructions from [Start your validator node](#start-your-validator-node)
-
-2. Create a local key pair
-
-   ```sh
-   > starsd keys add <key-name>
-   > starsd keys show <key-name> -a
-   ```
-
-3. Create validator
-
-   ```sh
-   $ starsd tx staking create-validator \
-   --amount 250000000000ustarx \
-   --commission-max-change-rate "0.1" \
-   --commission-max-rate "0.20" \
-   --commission-rate "0.1" \
-   --min-self-delegation "1" \
-   --details "validators write bios too" \
-   --pubkey=$(starsd tendermint show-validator) \
-   --moniker <your_moniker> \
-   --chain-id cygnusx-1 \
-   --gas-prices 0.025ustarx \
-   --from <key-name>
-   ```
-
-4. Request tokens from the [Stargaze Discord #validator channel](https://discord.gg/QeJWCrE) if you need more.
+✨ Congrats! You have done everything you need to participate in the testnet. Now just hang tight for further instructions on starting your node when the network starts (7/13/2021 1600 UTC).
