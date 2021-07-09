@@ -1,1 +1,1 @@
-bellatrix-1/README.md
+cygnusx-1/README.md
