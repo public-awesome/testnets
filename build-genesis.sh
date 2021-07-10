@@ -58,7 +58,7 @@ starsd add-genesis-account stars1wppujuuqrv52atyg8uw3x779r8w72ehrr5a4yx 50000000
 
 echo "Processing validators..."
 mkdir -p ~/.starsd/config/gentx
-for i in $NETWORK/gentx/*.json; do
+for i in $CHAIN_ID/gentx/*.json; do
     echo $i
     starsd add-genesis-account $(jq -r '.body.messages[0].delegator_address' $i) $VALIDATOR_COINS \
         --vesting-amount $VALIDATOR_COINS \
