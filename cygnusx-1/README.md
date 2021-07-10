@@ -152,3 +152,56 @@ Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
 - Create a PR onto https://github.com/public-awesome/networks
 
 ✨ Congrats! You have done everything you need to participate in the testnet. Now just hang tight for further instructions on starting your node when the network starts (7/13/2021 1600 UTC).
+
+### Running in production
+
+Download Genesis file when the time is right. Put it in your `/home/<user>/.starsd` folder.
+
+Create a systemd file for your Stargaze service:
+
+```sh
+sudo nano /etc/systemd/system/starsd.service
+```
+
+Copy and paste the following and update `<YOUR_USERNAME>`, `<GO_WORKSPACE>`, and `<CHAIN_ID>`:
+
+```sh
+Description=Stargaze daemon
+After=network-online.target
+[Service]
+User=<YOUR_USERNAME>
+ExecStart=/home/<YOUR_USERNAME>/<GO_WORKSPACE>/go/bin/starsd start --p2p.laddr tcp://0.0.0.0:26656 --home /home/<YOUR_USERNAME>/.starsd
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+[Install]
+WantedBy=multi-user.target
+```
+
+2
+**This assumes `$HOME/go_workspace` to be your Go workspace, and `$HOME/.starsd` to be your directory for config and data. Your actual directory locations may vary.**
+
+Enable and start the new service:
+
+```sh
+sudo systemctl enable starsd
+sudo systemctl start starsd
+```
+
+Check status:
+
+```sh
+junod status
+```
+
+Check logs:
+
+```sh
+journalctl -u junod -f
+```
+
+Stop service:
+```sh
+sudo systemctl stop starsd
+```
+
