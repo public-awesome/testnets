@@ -86,7 +86,7 @@ to you PATH.
 ```sh
 git clone https://github.com/cosmos/cosmos-sdk
 cd cosmos-sdk
-git checkout v0.42.5
+git checkout v0.42.7
 make cosmovisor
 cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
 cd $HOME
@@ -200,4 +200,4 @@ Good luck! See ya in the Discord!
 ---
 *Disclaimer: This content is provided for informational purposes only, and should not be relied upon as legal, business, investment, or tax advice. You should consult your own advisors as to those matters. References to any securities or digital assets are for illustrative purposes only and do not constitute an investment recommendation or offer to provide investment advisory services. Furthermore, this content is not directed at nor intended for use by any investors or prospective investors, and may not under any circumstances be relied upon when making investment decisions.*
 
-This work is a derivative of ["Osmosis Genesis Validators Guide"](https://github.com/osmosis-labs/networks/genesis-validators.md), which is a derivative of ["Agoric Validator Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric validator guide is itself is a derivative of ["Validating Kava Mainnet"](https://medium.com/kava-labs/validating-kava-mainnet-72fa1b6ea579) by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC BY](http://creativecommons.org/licenses/by/4.0/). "Stargaze Cygnus X-1 Testnet Instructions" is licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/) by [Stargaze](https://stargaze.fi/).  It was extensively modified to be relevant to the Stargaze Chain.
+This work is a derivative of ["Osmosis Genesis Validators Guide"](https://github.com/osmosis-labs/networks/genesis-validators.md), which is a derivative of ["Agoric Validator Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric validator guide is itself is a derivative of ["Validating Kava Mainnet"](https://medium.com/kava-labs/validating-kava-mainnet-72fa1b6ea579) by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC BY](http://creativecommons.org/licenses/by/4.0/). "Stargaze Cygnus X-1 Testnet Instructions" is licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/) by [Stargaze](https://stargaze.fi/). It was extensively modified to be relevant to the Stargaze Chain.
