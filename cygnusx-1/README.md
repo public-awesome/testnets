@@ -55,7 +55,7 @@ starsd version --long
 name: starsd
 server_name: starsd
 version: '"0.9.2"'
-commit: 8d4324cd932fa37f064507bd136d5cbc6287249a
+commit: b854ac719aa7c5da1e89b825592e8f4eef5167bd
 build_tags: netgo,ledger
 go: go version go1.16.3 darwin/amd64
 ```
