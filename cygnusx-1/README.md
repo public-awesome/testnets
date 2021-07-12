@@ -127,6 +127,12 @@ Stargaze comes with a script to generate the genesis file required to start the 
 ./build-genesis.sh
 ```
 
+Verify your genesis file was created properly:
+```sh
+shasum -a 256 ~/.starsd/config/genesis.json
+3d2b41be3e0df119a65746962f7c001ee8a0086c0f96d503c55ca9397e4ec504  genesis.json
+```
+
 ### Updates to config files
 
 You should review the `config.toml` and `app.toml` that was generated when you ran `starsd init` last time.
