@@ -148,9 +148,11 @@ _NOTE: This can take 10-30 minutes depending on your setup._
 Verify your genesis file was created properly:
 
 ```sh
-shasum -a 256 ~/.starsd/config/genesis.json
-3d2b41be3e0df119a65746962f7c001ee8a0086c0f96d503c55ca9397e4ec504  genesis.json
+./checkgen.sh
+f5c09fddaba793e1fb98b903c9555f417714e7bffe4d86789730c61bfe28201e
 ```
+
+_NOTE: You will need to install [jq](https://stedolan.github.io/jq/download/) if you haven't already for the above to work_.
 
 ### Updates to config files
 
@@ -184,7 +186,7 @@ service.
 ```sh
 sudo tee /etc/systemd/system/starsd.service > /dev/null <<EOF  
 [Unit]
-Description=Osmosis Daemon
+Description=Stargaze Daemon
 After=network-online.target
 
 [Service]
