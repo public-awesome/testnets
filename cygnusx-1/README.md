@@ -186,7 +186,7 @@ service.
 ```sh
 sudo tee /etc/systemd/system/starsd.service > /dev/null <<EOF  
 [Unit]
-Description=Osmosis Daemon
+Description=Stargaze Daemon
 After=network-online.target
 
 [Service]
