@@ -16,6 +16,7 @@ fi
 echo "Lockup period is $LOCKUP"
 
 rm ~/.starsd/config/genesis.json
+rm -f ~/.starsd/config/gentx
 
 echo "Processing airdrop snapshot..."
 if ! [ -f genesis.json ]; then
