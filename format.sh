@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NETWORK=bellatrix-1
+NETWORK=cygnusx-1
 
 for i in $NETWORK/gentx/*.json; do
   echo $i
