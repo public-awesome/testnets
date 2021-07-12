@@ -8,7 +8,7 @@ Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer
 
 Binaries: Pending
 
-Genesis file: Pending
+Genesis file: See [Generate genesis file](#generate-genesis-file)
 
 Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
 
@@ -33,14 +33,14 @@ This guide assumes that you have completed the tasks involved in [Part 1](part1.
 
 These examples are written targeting an Ubuntu 20.04 system.  Relevant changes to commands should be made depending on the OS/architecture you are running on.
 
-### Update starsd to v0.9.0
+### Update starsd to v0.9.1
 
-Please update to the `v0.9.0` tag and rebuild your binaries.
+Please update to the `v0.9.1` tag and rebuild your binaries.
 
 ```sh
 git clone https://github.com/public-awesome/stargaze
 cd stargaze
-git checkout v0.9.0
+git checkout v0.9.1
 
 make install
 ```
@@ -54,8 +54,8 @@ starsd version --long
 
 name: starsd
 server_name: starsd
-version: '"0.9.0"'
-commit: [TBD]
+version: '"0.9.1"'
+commit: 8d4324cd932fa37f064507bd136d5cbc6287249a
 build_tags: netgo,ledger
 go: go version go1.16.3 darwin/amd64
 ```

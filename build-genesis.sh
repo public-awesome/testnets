@@ -23,7 +23,7 @@ if ! [ -f genesis.json ]; then
 fi
 starsd export-airdrop-snapshot uatom genesis.json snapshot.json
 starsd init testmoniker --chain-id $CHAIN_ID
-starsd prepare-genesis testnet $CHAIN_ID
+starsd prepare-genesis mainnet $CHAIN_ID
 starsd import-genesis-accounts-from-snapshot snapshot.json
 
 echo "Adding vesting accounts..."
