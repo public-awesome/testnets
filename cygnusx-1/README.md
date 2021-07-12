@@ -191,13 +191,13 @@ sudo systemctl start starsd
 Check status:
 
 ```sh
-junod status
+starsd status
 ```
 
 Check logs:
 
 ```sh
-journalctl -u junod -f
+journalctl -u starsd -f
 ```
 
 Stop service:
