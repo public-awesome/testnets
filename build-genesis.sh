@@ -23,7 +23,7 @@ if ! [ -f genesis.json ]; then
 fi
 starsd export-airdrop-snapshot uatom genesis.json snapshot.json
 starsd init testmoniker --chain-id $CHAIN_ID
-starsd prepare-genesis mainnet $CHAIN_ID
+starsd prepare-genesis testnet $CHAIN_ID
 starsd import-genesis-accounts-from-snapshot snapshot.json
 
 echo "Adding vesting accounts..."
@@ -37,13 +37,13 @@ fi
 vesting_start_time=$(($GENESIS_UNIX_TIME + $LOCKUP))
 vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
-starsd add-genesis-account stars1xxylsamp3sn9e4arm645xdvk6e3c26mvuclqf2 350000000000000$DENOM
+starsd add-genesis-account stars1mxynx2ay7kxuu6vsu8ruy7pwgmsvz93atfj7nu 350000000000000$DENOM
 starsd add-genesis-account stars13nh557xzyfdm6csyp0xslu939l753sdlgdc2q0 250000000000000$DENOM
-starsd add-genesis-account stars1me6xrxj80cp4smrmy2mwaan67spnsen9yn3kry 16666666666667$DENOM \
+starsd add-genesis-account stars1xuuv5vucu9h74svhma4ykfvjzu4j0rxrsn0yfk 16666666666667$DENOM \
     --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
-starsd add-genesis-account stars18qw9ydpewh405w4lvmuhlg9gtaep79vygx0d08 16666666666667$DENOM \
+starsd add-genesis-account stars1s4ckh9405q0a3jhkwx9wkf9hsjh66nmuu53dwe 16666666666667$DENOM \
     --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
