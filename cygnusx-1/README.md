@@ -123,11 +123,28 @@ This will create a new `.starsd` folder in your HOME directory.
 
 Stargaze comes with a script to generate the genesis file required to start the chain. Therefore, no single party is responsible for starting the chain. Each validator generates their own genesis file, which should be identical for all.
 
+If you don't already have the `networks` repo cloned:
+
+```sh
+git clone https://github.com/public-awesome/networks
+cd networks
+```
+
+Update to the latest:
+
+```sh
+git checkout master
+git pull
+```
+
+Build the genesis file:
+
 ```sh
 ./build-genesis.sh
 ```
 
 Verify your genesis file was created properly:
+
 ```sh
 shasum -a 256 ~/.starsd/config/genesis.json
 3d2b41be3e0df119a65746962f7c001ee8a0086c0f96d503c55ca9397e4ec504  genesis.json
