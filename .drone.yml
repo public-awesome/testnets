@@ -16,13 +16,13 @@ steps:
   - name: collect
     image: publicawesome/stargaze:develop
     commands:
-      - sh ./check.sh
+      - sh ./run.sh
 trigger:
   event:
     - pull_request
 
 ---
 kind: signature
-hmac: b93e41fbb68268a7e333fdab874d2ee9fe4052c96809d0daa3dd28407c5eb8d1
+hmac: 6163436b23843d78fb74ba8697b4f11efb463b96be65c1cce235c245a1181510
 
 ...
