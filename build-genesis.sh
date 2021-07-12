@@ -37,17 +37,17 @@ fi
 vesting_start_time=$(($GENESIS_UNIX_TIME + $LOCKUP))
 vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
-starsd add-genesis-account stars1s4ckh9405q0a3jhkwx9wkf9hsjh66nmuu53dwe 350000000000000$DENOM
+starsd add-genesis-account stars1mxynx2ay7kxuu6vsu8ruy7pwgmsvz93atfj7nu 350000000000000$DENOM
 starsd add-genesis-account stars13nh557xzyfdm6csyp0xslu939l753sdlgdc2q0 250000000000000$DENOM
-starsd add-genesis-account stars12yxedm78tpptyhhasxrytyfyj7rg7dcqfgrdk4 16666666666667$DENOM \
+starsd add-genesis-account stars1xuuv5vucu9h74svhma4ykfvjzu4j0rxrsn0yfk 16666666666667$DENOM \
     --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
-starsd add-genesis-account stars1nek5njjd7uqn5zwf5zyl3xhejvd36er3qzp6x3 16666666666667$DENOM \
+starsd add-genesis-account stars1s4ckh9405q0a3jhkwx9wkf9hsjh66nmuu53dwe 16666666666667$DENOM \
     --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
-starsd add-genesis-account stars1avlcqcn4hsxrds2dgxmgrj244hu630kfl89vrt 16666666666667$DENOM \
+starsd add-genesis-account stars1kdfmfxg4tq68jxvl95h99wq9mvz9lxg6whrsjh 16666666666667$DENOM \
     --vesting-amount 16666666666667$DENOM \
     --vesting-start-time $vesting_start_time \
     --vesting-end-time $vesting_end_time
