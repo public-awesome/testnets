@@ -143,6 +143,8 @@ Build the genesis file:
 ./build-genesis.sh
 ```
 
+_NOTE: This can take 10-30 minutes depending on your setup._
+
 Verify your genesis file was created properly:
 
 ```sh
