@@ -32,7 +32,7 @@ vesting_end_time=$(($vesting_start_time + $LOCKUP))
 
 if [ -f "$FILE" ]; then
     starsd init validator --chain-id cygnusx-1
-    sed -i 's#tcp://127.0.0.1:26657#tcp://0.0.0.0:26657#g' ~/.gaiad/config/config.toml
+    sed -i 's#tcp://127.0.0.1:26657#tcp://0.0.0.0:26657#g' ~/.starsd/config/config.toml
     mkdir -p ~/.starsd/config/gentx
     echo "Processing validators..."
     for i in $CHAIN_ID/gentx/*.json; do
