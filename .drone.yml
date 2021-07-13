@@ -10,11 +10,11 @@ steps:
       GITHUB_TOKEN:
         from_secret: github_token
   - name: collect
-    image: publicawesome/stargaze:develop
+    image: publicawesome/stargaze:0.9.1
     commands:
       - sh ./check.sh
   - name: run
-    image: publicawesome/stargaze:develop
+    image: publicawesome/stargaze:0.9.1
     commands:
       - sh ./run.sh
 trigger:
@@ -23,6 +23,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8b4299cf9113d38dcf2faf3d00d8df11a7ba01da134d78ed150cfba71edaa554
+hmac: 1be32bec828295ed5c83f25b8d2428736a94b831f7c42b8ea3be497029810779
 
 ...
