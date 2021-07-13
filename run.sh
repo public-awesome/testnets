@@ -6,6 +6,7 @@ if [ -f "$FILE" ]; then
     echo "checking gentx collect"
     export FILE_LOCATION=$(cat check-gen-tx-file)
     starsd init validator --chain-id cygnusx-1
+    sed -i 's#tcp://127.0.0.1:26657#tcp://0.0.0.0:26657#g' ~/.gaiad/config/config.toml
     mkdir -p ~/.starsd/config/gentx
     echo "Processing validators..."
     for i in $CHAIN_ID/gentx/*.json; do
@@ -18,6 +19,5 @@ if [ -f "$FILE" ]; then
     done
     starsd collect-gentxs
     starsd validate-genesis
-    starsd start &
-    sleep 60
+    starsd start
 fi
