@@ -1,4 +1,4 @@
-# Stargaze Cygnus X-1 Testnet Instructions
+# Stargaze Cygnus X-1 Testnet Instructions: Part 2
 
 ![Alt Text](https://scitechdaily.com/images/Cygnus-X-1-System.gif)
 
@@ -8,147 +8,223 @@ Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer
 
 Binaries: Pending
 
-Genesis file: Pending
+Genesis file: See [Generate genesis file](#generate-genesis-file)
 
 Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
 
 Peers: Pending
 
-## Minimum hardware requirements
+## Overview
 
-- 2x CPUs
-- 4GB RAM
-- 50GB+ of disk space
+Thank you for submitting a gentx! This guide will provide instructions on getting ready for the testnet.
 
-## Software requirements
 
-- [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v0.8.1](https://github.com/public-awesome/stargaze/releases/tag/v0.8.1)
+**The Chain Genesis Time is 17:00 UTC on July 13, 2021.**
 
-### Install Stargaze
+Please have your validator up and ready by this time, and be available for further instructions if necessary
+at that time.
 
-#### Install Go
+The primary point of communication for the genesis process will be the #validators
+channel on the [Stargaze Discord](https://discord.gg/QeJWCrE).
 
-Stargaze is built using Go and requires Go version 1.15+. In this example, we will be installing Go on Ubuntu 20.04:
+## Instructions
 
-```sh
-# First remove any existing old Go installation
-sudo rm -rf /usr/local/go
+This guide assumes that you have completed the tasks involved in [Part 1](cygnusx-1/part1.md). You should be running on a machine that meets the hardware requirements specified in Part 1 with Go installed. We are assuming you already have a daemon home (`$HOME/.starsd`) setup.
 
-# Install the latest version of Go using this helpful script 
-curl https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
+These examples are written targeting an Ubuntu 20.04 system.  Relevant changes to commands should be made depending on the OS/architecture you are running on.
 
-# Update environment variables to include go
-cat <<'EOF' >>$HOME/.profile
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-source $HOME/.profile
-```
+### Update starsd to v0.9.2
 
-To verify that Go is installed:
+Please update to the `v0.9.2` tag and rebuild your binaries.
 
 ```sh
-go version
-# Should return go version go1.16.4 linux/amd64
+git clone https://github.com/public-awesome/stargaze
+cd stargaze
+git checkout v0.9.2
+
+make install
 ```
 
-#### Build Stargaze from source
+### Verify installation
 
-```sh
-mkdir -p $GOPATH/src/github.com/public-awesome
-cd $GOPATH/src/github.com/public-awesome
-git clone https://github.com/public-awesome/stargaze && cd stargaze
-git fetch origin --tags
-git checkout v0.8.1
-make build && make install
-```
-
-#### Verify installation
-
-To verify if the installation was successful, execute the following command:
+Verify that everything is OK.
 
 ```sh
 starsd version --long
+
+name: starsd
+server_name: starsd
+version: '"0.9.2"'
+commit: b854ac719aa7c5da1e89b825592e8f4eef5167bd
+build_tags: netgo,ledger
+go: go version go1.16.3 darwin/amd64
 ```
 
-It will display the version of `starsd` currently installed:
+If the software version does not match, then please check your `$PATH` to ensure the correct `starsd` is running.
+
+### Save chain-id in config
+
+Please save the chain-id to your `client.toml`. This will make it so you do not have to manually pass in the chain-id flag for every CLI command.
 
 ```sh
-name: stargaze
-server_name: starsd
-version: 0.8.1
-commit: 7c5d8ed4379158ea6045697c55cda288efce8eff
-build_tags: netgo
-go: go version go1.16.5 darwin/amd64
+starsd config chain-id cygnusx-1
 ```
 
-## Setup validator node
+### Install and setup Cosmovisor
 
-Below are the instructions to generate and submit your genesis transaction.
+We highly recommend validators use cosmovisor to run their nodes. This will make low-downtime upgrades more smoother,
+as validators don't have to manually upgrade binaries during the upgrade, and instead can preinstall new binaries, and
+cosmovisor will automatically update them based on on-chain SoftwareUpgrade proposals.
 
-### Generate genesis transaction (gentx)
+You should review the docs for cosmovisor located here: https://docs.cosmos.network/master/run-node/cosmovisor.html
 
-1. Initialize the Stargaze directories and create the local genesis file with the correct
-   chain-id
+If you choose to use cosmovisor, please continue with these instructions:
 
-   ```sh
-   starsd config chain-id cygnusx-1
-   # moniker is the name of your node
-   starsd init <moniker>
-   ```
+Cosmovisor is currently located in the Cosmos SDK repo, so you will need to download that, build cosmovisor, and add it
+to you PATH.
 
-2. Create a local key pair
+```sh
+git clone https://github.com/cosmos/cosmos-sdk
+cd cosmos-sdk
+git checkout v0.42.7
+make cosmovisor
+cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
+cd $HOME
+```
 
-   ```sh
-   starsd keys add <key-name>
-   ```
+After this, you must make the necessary folders for cosmosvisor in your daemon home directory (`~/.starsd`).
 
-3. Add your account to your local genesis file with a given amount and the key you
-   just created. Use only `1000000000000ustarx`, other amounts will be ignored.
+```sh
+mkdir -p ~/.starsd
+mkdir -p ~/.starsd/cosmovisor
+mkdir -p ~/.starsd/cosmovisor/genesis
+mkdir -p ~/.starsd/cosmovisor/genesis/bin
+mkdir -p ~/.starsd/cosmovisor/upgrades
+```
 
-    ```sh
-    starsd add-genesis-account $(starsd keys show <key-name> -a) 1000000000000ustarx \
-        --vesting-amount 1000000000000ustarx \
-        --vesting-start-time 1626292800 \
-        --vesting-end-time 1626379200
-    ```
+Cosmovisor requires some ENVIRONMENT VARIABLES be set in order to function properly.  We recommend setting these in
+your `.profile` so it is automatically set in every session.
 
-4. Generate the genesis transaction (gentx) that submits your validator info to the chain.
-   The amount here is how much of your own funds you want to delegate to your validator (self-delegate).
-   Start with 50% of your total (500000000000ustarx). You can always delegate the rest later.
+```
+echo "# Setup Cosmovisor" >> ~/.profile
+echo "export DAEMON_NAME=starsd" >> ~/.profile
+echo "export DAEMON_HOME=$HOME/.starsd" >> ~/.profile
+source ~/.profile
+```
 
-   ```sh
-   starsd gentx <key-name> 500000000000ustarx --chain-id=cygnusx-1
-   ```
+Finally, you should copy the starsd binary into the `cosmovisor/genesis` folder.
+```
+cp $GOPATH/bin/starsd ~/.starsd/cosmovisor/genesis/bin
+```
 
-   If all goes well, you will see a message similar to the following:
+This will create a new `.starsd` folder in your HOME directory.
 
-   ```sh
-   Genesis transaction written to "/home/user/.starsd/config/gentx/gentx-******.json"
-   ```
+### Generate genesis file
 
-### Submit genesis transaction
+Stargaze comes with a script to generate the genesis file required to start the chain. Therefore, no single party is responsible for starting the chain. Each validator generates their own genesis file, which should be identical for all.
 
-Submit your gentx in a PR [here](https://github.com/public-awesome/networks)
+If you don't already have the `networks` repo cloned:
 
-- Fork [the networks repo](https://github.com/public-awesome/networks) into your Github account
+```sh
+git clone https://github.com/public-awesome/networks
+cd networks
+```
 
-- Clone your repo using
+Update to the latest:
 
-  ```sh
-  git clone https://github.com/<github-username>/networks
-  ```
+```sh
+git checkout master
+git pull
+```
 
-- Copy the generated gentx json file to `<repo_path>/cygnusx-1/gentx/`
+Build the genesis file:
 
-  ```sh
-  cd networks
-  cp ~/.starsd/config/gentx/gentx*.json ./cygnusx-1/gentx/
-  ```
+```sh
+./build-genesis.sh
+```
 
-- Commit and push to your repo
-- Create a PR onto https://github.com/public-awesome/networks
+_NOTE: This can take 10-30 minutes depending on your setup._
 
-✨ Congrats! You have done everything you need to participate in the testnet. Now just hang tight for further instructions on starting your node when the network starts (7/13/2021 1600 UTC).
+Verify your genesis file was created properly:
+
+```sh
+./checkgen.sh
+f5c09fddaba793e1fb98b903c9555f417714e7bffe4d86789730c61bfe28201e
+```
+
+_NOTE: You will need to install [jq](https://stedolan.github.io/jq/download/) if you haven't already for the above to work_.
+
+### Updates to config files
+
+You should review the `config.toml` and `app.toml` that was generated when you ran `starsd init` last time.
+
+A couple things to highlight:
+
+- We have defaulted all nodes to maintaining 2 recent statesync snapshots.
+- When it comes the min gas fees, our recommendation is to leave this blank for now (charge no gas fees), to make the UX as seamless as possible
+for users to be able to pay with IBC assets.
+
+### Reset chain DB
+
+There shouldn't be any chain database yet, but in case there is for some reason, you should reset it.
+
+```sh
+starsd unsafe-reset-all
+```
+
+### Start your node
+
+Now that everything is setup and ready to go, you can start your node.
+
+```sh
+cosmovisor start
+```
+
+You will need some way to keep the process always running.  If you're on linux, you can do this by creating a 
+service.
+
+```sh
+sudo tee /etc/systemd/system/starsd.service > /dev/null <<EOF  
+[Unit]
+Description=Stargaze Daemon
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which cosmovisor) start
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+
+Environment="DAEMON_HOME=$HOME/.starsd"
+Environment="DAEMON_NAME=starsd"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+Then update and start the node
+
+```sh
+sudo -S systemctl daemon-reload
+sudo -S systemctl enable starsd
+sudo -S systemctl start starsd
+```
+
+You can check the status with:
+
+```sh
+systemctl status starsd
+```
+
+## Conclusion
+
+Good luck! See ya in the Discord!
+
+---
+*Disclaimer: This content is provided for informational purposes only, and should not be relied upon as legal, business, investment, or tax advice. You should consult your own advisors as to those matters. References to any securities or digital assets are for illustrative purposes only and do not constitute an investment recommendation or offer to provide investment advisory services. Furthermore, this content is not directed at nor intended for use by any investors or prospective investors, and may not under any circumstances be relied upon when making investment decisions.*
+
+This work is a derivative of ["Osmosis Genesis Validators Guide"](https://github.com/osmosis-labs/networks/genesis-validators.md), which is a derivative of ["Agoric Validator Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric validator guide is itself is a derivative of ["Validating Kava Mainnet"](https://medium.com/kava-labs/validating-kava-mainnet-72fa1b6ea579) by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC BY](http://creativecommons.org/licenses/by/4.0/). "Stargaze Cygnus X-1 Testnet Instructions" is licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/) by [Stargaze](https://stargaze.fi/). It was extensively modified to be relevant to the Stargaze Chain.
