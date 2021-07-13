@@ -4,7 +4,7 @@ for i in $CHAIN_ID/gentx/*.json; do
     pubkeybase64=$(jq -r '.body.messages[0].pubkey.key' $i)
     pubkey=$(starsd debug pubkey $pubkeybase64 | grep Consensus | rev | cut -d " " -f1 | rev)
     local_pub_key=$(starsd tendermint show-validator)
-    echo "Checkinf file $i"
+    echo "Checking file $i"
     if [ "$pubkey" == "$local_pub_key" ]; then
         echo "This is a validator node"
         echo "Your gentx is $i"
