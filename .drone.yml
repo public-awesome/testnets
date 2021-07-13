@@ -17,11 +17,13 @@ steps:
     image: publicawesome/stargaze:0.9.1
     detach: true
     commands:
+      - apk add jq
       - sh ./run.sh
   - name: check_runner
     image: alpine:3
     commands:
       - apk add curl
+      - apk add jq
       - sleep 50
       - curl http://runner:26657/status
 trigger:
@@ -30,6 +32,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 9096fcc3237475ef398457d007ef115071c9f681f830845f09dbe3f9a0c9a0f3
+hmac: d6c972205c650d00c4e99f638c64e0a221711fcf4696761686289bd9b805d359
 
 ...
