@@ -10,15 +10,28 @@ steps:
       GITHUB_TOKEN:
         from_secret: github_token
   - name: collect
-    image: publicawesome/stargaze:develop
+    image: publicawesome/stargaze:0.9.1
     commands:
       - sh ./check.sh
+  - name: runner
+    image: publicawesome/stargaze:0.9.1
+    detach: true
+    commands:
+      - apk add jq
+      - sh ./run.sh
+  - name: check_runner
+    image: alpine:3
+    commands:
+      - apk add curl
+      - apk add jq
+      - sh ./check-running-node.sh
+
 trigger:
   event:
     - pull_request
 
 ---
 kind: signature
-hmac: 74faa35fc712dd6a99de2f8bfa716b1775485b116b9d549810cfcee1ffbef285
+hmac: 682577d282dcaedb9d72319d71325feecb71e29b15bbe021d1ee51188b197818
 
 ...
