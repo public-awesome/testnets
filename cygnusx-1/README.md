@@ -17,7 +17,7 @@ Peers: Pending
 Thank you for submitting a gentx! This guide will provide instructions on getting ready for the testnet.
 
 
-**The Chain Genesis Time is 17:00 UTC on July 13, 2021.**
+**The Chain Genesis Time is 17:00 UTC on July 15, 2021.**
 
 Please have your validator up and ready by this time, and be available for further instructions if necessary
 at that time.
