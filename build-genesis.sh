@@ -6,6 +6,12 @@ ONE_HOUR=3600
 ONE_DAY=$(($ONE_HOUR * 24))
 ONE_YEAR=$(($ONE_DAY * 365))
 VALIDATOR_COINS=1000000000000$DENOM
+REQUIRED_VERSION="0.9.3"
+VERSION="$(starsd version |  awk '{print $NF}')"
+if [ "$VERSION" != "$REQUIRED_VERSION" ]; then
+    echo "starsd required $REQUIRED_VERSION, current $VERSION"
+    exit 1
+fi
 
 if [ "$1" == "mainnet" ]
 then
