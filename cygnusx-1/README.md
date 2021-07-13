@@ -6,8 +6,6 @@
 
 Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer.cygnusx-1.publicawesome.dev/)
 
-Binaries: Pending
-
 Genesis file: See [Generate genesis file](#generate-genesis-file)
 
 Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
@@ -33,14 +31,14 @@ This guide assumes that you have completed the tasks involved in [Part 1](cygnus
 
 These examples are written targeting an Ubuntu 20.04 system.  Relevant changes to commands should be made depending on the OS/architecture you are running on.
 
-### Update starsd to v0.9.2
+### Update starsd to v0.9.3
 
-Please update to the `v0.9.2` tag and rebuild your binaries.
+Please update to the `v0.9.3` tag and rebuild your binaries.
 
 ```sh
 git clone https://github.com/public-awesome/stargaze
 cd stargaze
-git checkout v0.9.2
+git checkout v0.9.3
 
 make install
 ```
@@ -54,8 +52,8 @@ starsd version --long
 
 name: starsd
 server_name: starsd
-version: '"0.9.2"'
-commit: b854ac719aa7c5da1e89b825592e8f4eef5167bd
+version: '"0.9.3"'
+commit: a6ecce88b17428836041caf0fff8ada3c15afd00
 build_tags: netgo,ledger
 go: go version go1.16.3 darwin/amd64
 ```
