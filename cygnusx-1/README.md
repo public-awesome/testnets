@@ -156,11 +156,12 @@ _NOTE: You will need to install [jq](https://stedolan.github.io/jq/download/) if
 
 You should review the `config.toml` and `app.toml` that was generated when you ran `starsd init` last time.
 
-A couple things to highlight:
+When it comes the min gas fees, our recommendation is to leave this blank for now (charge no gas fees), to make the UX as seamless as possible
+for users to be able to pay with IBC assets. So in `app.toml`:
 
-- We have defaulted all nodes to maintaining 2 recent statesync snapshots.
-- When it comes the min gas fees, our recommendation is to leave this blank for now (charge no gas fees), to make the UX as seamless as possible
-for users to be able to pay with IBC assets.
+```sh
+minimum-gas-prices = ""
+```
 
 ### Reset chain DB
 
