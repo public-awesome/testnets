@@ -147,7 +147,7 @@ Verify your genesis file was created properly:
 
 ```sh
 ./checkgen.sh
-0bf3d6531c6b13677472ef2a1fc1f7fe01a5e23fce5ff439a43a6522aa1503a6
+42bf3aa2154bfa33deaa77c3a70d2aac94e382eb847ed3f07dbb71be695cd4d0
 ```
 
 _NOTE: You will need to install [jq](https://stedolan.github.io/jq/download/) if you haven't already for the above to work_.
