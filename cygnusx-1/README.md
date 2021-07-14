@@ -10,7 +10,7 @@ Genesis file: See [Generate genesis file](#generate-genesis-file)
 
 Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
 
-Peers: Pending
+Peers: https://hackmd.io/ruGVasSzR9iUhIirVff44Q?both
 
 ## Overview
 
