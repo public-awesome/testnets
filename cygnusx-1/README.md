@@ -6,7 +6,9 @@
 
 Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer.cygnusx-1.publicawesome.dev/)
 
-Genesis file: See [Generate genesis file](#generate-genesis-file)
+Genesis file: https://github.com/public-awesome/networks/releases/download/cygnusx-1a/genesis.json
+
+Hash: `sha256sum eacabd1f92a3d750610c53f27641aca0d38ec5fda370b4e821a05003e8b866f2`
 
 Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
 
@@ -15,7 +17,6 @@ Peers: https://hackmd.io/ruGVasSzR9iUhIirVff44Q?both
 ## Overview
 
 Thank you for submitting a gentx! This guide will provide instructions on getting ready for the testnet.
-
 
 **The Chain Genesis Time is 17:00 UTC on July 15, 2021.**
 
@@ -29,7 +30,7 @@ channel on the [Stargaze Discord](https://discord.gg/QeJWCrE).
 
 This guide assumes that you have completed the tasks involved in [Part 1](cygnusx-1/part1.md). You should be running on a machine that meets the hardware requirements specified in Part 1 with Go installed. We are assuming you already have a daemon home (`$HOME/.starsd`) setup.
 
-These examples are written targeting an Ubuntu 20.04 system.  Relevant changes to commands should be made depending on the OS/architecture you are running on.
+These examples are written targeting an Ubuntu 20.04 system. Relevant changes to commands should be made depending on the OS/architecture you are running on.
 
 ### Update starsd to v0.9.3
 
@@ -100,7 +101,7 @@ mkdir -p ~/.starsd/cosmovisor/genesis/bin
 mkdir -p ~/.starsd/cosmovisor/upgrades
 ```
 
-Cosmovisor requires some ENVIRONMENT VARIABLES be set in order to function properly.  We recommend setting these in
+Cosmovisor requires some ENVIRONMENT VARIABLES be set in order to function properly. We recommend setting these in
 your `.profile` so it is automatically set in every session.
 
 ```
@@ -111,6 +112,7 @@ source ~/.profile
 ```
 
 Finally, you should copy the starsd binary into the `cosmovisor/genesis` folder.
+
 ```
 cp $GOPATH/bin/starsd ~/.starsd/cosmovisor/genesis/bin
 ```
@@ -179,11 +181,11 @@ Now that everything is setup and ready to go, you can start your node.
 cosmovisor start
 ```
 
-You will need some way to keep the process always running.  If you're on linux, you can do this by creating a 
+You will need some way to keep the process always running. If you're on linux, you can do this by creating a
 service.
 
 ```sh
-sudo tee /etc/systemd/system/starsd.service > /dev/null <<EOF  
+sudo tee /etc/systemd/system/starsd.service > /dev/null <<EOF
 [Unit]
 Description=Stargaze Daemon
 After=network-online.target
@@ -224,6 +226,7 @@ systemctl status starsd
 Good luck! See ya in the Discord!
 
 ---
-*Disclaimer: This content is provided for informational purposes only, and should not be relied upon as legal, business, investment, or tax advice. You should consult your own advisors as to those matters. References to any securities or digital assets are for illustrative purposes only and do not constitute an investment recommendation or offer to provide investment advisory services. Furthermore, this content is not directed at nor intended for use by any investors or prospective investors, and may not under any circumstances be relied upon when making investment decisions.*
+
+_Disclaimer: This content is provided for informational purposes only, and should not be relied upon as legal, business, investment, or tax advice. You should consult your own advisors as to those matters. References to any securities or digital assets are for illustrative purposes only and do not constitute an investment recommendation or offer to provide investment advisory services. Furthermore, this content is not directed at nor intended for use by any investors or prospective investors, and may not under any circumstances be relied upon when making investment decisions._
 
 This work is a derivative of ["Osmosis Genesis Validators Guide"](https://github.com/osmosis-labs/networks/genesis-validators.md), which is a derivative of ["Agoric Validator Guide"](https://github.com/Agoric/agoric-sdk/wiki/Validator-Guide) used under [CC BY](http://creativecommons.org/licenses/by/4.0/). The Agoric validator guide is itself is a derivative of ["Validating Kava Mainnet"](https://medium.com/kava-labs/validating-kava-mainnet-72fa1b6ea579) by [Kevin Davis](https://medium.com/@kevin_35106), used under [CC BY](http://creativecommons.org/licenses/by/4.0/). "Stargaze Cygnus X-1 Testnet Instructions" is licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/) by [Stargaze](https://stargaze.fi/). It was extensively modified to be relevant to the Stargaze Chain.
