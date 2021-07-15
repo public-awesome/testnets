@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DENOM=ustarx
-CHAIN_ID=cygnusx-1a
+CHAIN_ID=cygnusx-1
 GENTXS=cygnusx-1
 ONE_HOUR=3600
 ONE_DAY=$(($ONE_HOUR * 24))
@@ -77,5 +77,8 @@ done
 starsd collect-gentxs
 starsd validate-genesis
 
-cp ~/.starsd/config/genesis.json $GENTXS
-jq -S -f normalize.jq  ~/.starsd/config/genesis.json > $GENTXS/sorted_genesis.json
+cp ~/.starsd/config/genesis.json $GENTXS/pre-built.json
+jq -S -f normalize.jq  ~/.starsd/config/genesis.json > $GENTXS/genesis.json
+cp $GENTXS/genesis.json ~/.starsd/config/genesis.json
+sha256sum $GENTXS/genesis.json
+sha256sum ~/.starsd/config/genesis.json
