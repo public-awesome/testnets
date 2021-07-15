@@ -1,7 +1,8 @@
 #!/bin/bash
 
 DENOM=ustarx
-CHAIN_ID=cygnusx-1
+CHAIN_ID=cygnusx-1a
+GENTXS=cygnusx-1
 ONE_HOUR=3600
 ONE_DAY=$(($ONE_HOUR * 24))
 ONE_YEAR=$(($ONE_DAY * 365))
@@ -65,7 +66,7 @@ starsd add-genesis-account stars1wppujuuqrv52atyg8uw3x779r8w72ehrr5a4yx 50000000
 
 echo "Processing validators..."
 mkdir -p ~/.starsd/config/gentx
-for i in $CHAIN_ID/gentx/*.json; do
+for i in $GENTXS/gentx/*.json; do
     echo $i
     starsd add-genesis-account $(jq -r '.body.messages[0].delegator_address' $i) $VALIDATOR_COINS \
         --vesting-amount $VALIDATOR_COINS \
@@ -76,4 +77,5 @@ done
 starsd collect-gentxs
 starsd validate-genesis
 
-cp ~/.starsd/config/genesis.json $CHAIN_ID
+cp ~/.starsd/config/genesis.json $GENTXS
+jq -S -f normalize.jq  ~/.starsd/config/genesis.json > $GENTXS/sorted_genesis.json
