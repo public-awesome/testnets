@@ -8,9 +8,9 @@ Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer
 
 Genesis file: https://github.com/public-awesome/networks/releases/download/cygnusx-1a/genesis.json
 
-Hash: `sha256sum eacabd1f92a3d750610c53f27641aca0d38ec5fda370b4e821a05003e8b866f2`
+Hash: `sha256sum 6439f4652dcaaf3db85e9de18af147d89e3235377f7f0b75b8609f135c09d78a`
 
-Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36656`
+Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36657`
 
 Peers: https://hackmd.io/ruGVasSzR9iUhIirVff44Q?both
 
