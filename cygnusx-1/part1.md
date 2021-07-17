@@ -11,19 +11,19 @@
 ## Software requirements
 
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v0.8.1](https://github.com/public-awesome/stargaze/releases/tag/v0.8.1)
+- Latest version : [v0.10.0](https://github.com/public-awesome/stargaze/releases/tag/v0.10.0)
 
 ### Install Stargaze
 
 #### Install Go
 
-Stargaze is built using Go and requires Go version 1.15+. In this example, we will be installing Go on Ubuntu 20.04:
+Stargaze is built using Go and requires Go version 1.16+. In this example, we will be installing Go on Ubuntu 20.04:
 
 ```sh
 # First remove any existing old Go installation
 sudo rm -rf /usr/local/go
 
-# Install the latest version of Go using this helpful script 
+# Install the latest version of Go using this helpful script
 curl https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash
 
 # Update environment variables to include go
@@ -66,10 +66,10 @@ It will display the version of `starsd` currently installed:
 ```sh
 name: stargaze
 server_name: starsd
-version: 0.8.1
-commit: 7c5d8ed4379158ea6045697c55cda288efce8eff
-build_tags: netgo
-go: go version go1.16.5 darwin/amd64
+version: 0.10.0
+commit: eaa79abdf2942b143362aa15cfc204b4d977270b
+build_tags: netgo,ledger
+go: go version go1.16.4 linux/amd64
 ```
 
 ## Setup validator node
@@ -96,12 +96,12 @@ Below are the instructions to generate and submit your genesis transaction.
 3. Add your account to your local genesis file with a given amount and the key you
    just created. Use only `1000000000000ustarx`, other amounts will be ignored.
 
-    ```sh
-    starsd add-genesis-account $(starsd keys show <key-name> -a) 1000000000000ustarx \
-        --vesting-amount 1000000000000ustarx \
-        --vesting-start-time 1626292800 \
-        --vesting-end-time 1626379200
-    ```
+   ```sh
+   starsd add-genesis-account $(starsd keys show <key-name> -a) 1000000000000ustarx \
+       --vesting-amount 1000000000000ustarx \
+       --vesting-start-time 1626292800 \
+       --vesting-end-time 1626379200
+   ```
 
 4. Generate the genesis transaction (gentx) that submits your validator info to the chain.
    The amount here is how much of your own funds you want to delegate to your validator (self-delegate).

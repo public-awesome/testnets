@@ -6,9 +6,9 @@
 
 Block explorer: [https://explorer.cygnusx-1.publicawesome.dev/](https://explorer.cygnusx-1.publicawesome.dev/)
 
-Genesis file: https://github.com/public-awesome/networks/releases/download/cygnusx-1a/genesis.json
+Genesis file: https://github.com/public-awesome/networks/releases/download/cygnusx-1-final/genesis.json
 
-Hash: `sha256sum 6439f4652dcaaf3db85e9de18af147d89e3235377f7f0b75b8609f135c09d78a`
+Hash: `sha256sum d5baa2f54fbd4b0c84967e0b8a59bfa26ee5da6230da44f1f13624626cb3e927`
 
 Seeds: `b5c81e417113e283288c48a34f1d57c73a0c6682@seed.cygnusx-1.publicawesome.dev:36657`
 
@@ -18,7 +18,7 @@ Peers: https://hackmd.io/ruGVasSzR9iUhIirVff44Q?both
 
 Thank you for submitting a gentx! This guide will provide instructions on getting ready for the testnet.
 
-**The Chain Genesis Time is 17:00 UTC on July 15, 2021.**
+**The Chain Genesis Time is 17:00 UTC on July 19, 2021.**
 
 Please have your validator up and ready by this time, and be available for further instructions if necessary
 at that time.
@@ -32,14 +32,14 @@ This guide assumes that you have completed the tasks involved in [Part 1](cygnus
 
 These examples are written targeting an Ubuntu 20.04 system. Relevant changes to commands should be made depending on the OS/architecture you are running on.
 
-### Update starsd to v0.9.3
+### Update starsd to v0.10.0
 
-Please update to the `v0.9.3` tag and rebuild your binaries.
+Please update to the `v0.10.0` tag and rebuild your binaries.
 
 ```sh
 git clone https://github.com/public-awesome/stargaze
 cd stargaze
-git checkout v0.9.3
+git checkout v0.10.0
 
 make install
 ```
@@ -53,10 +53,10 @@ starsd version --long
 
 name: starsd
 server_name: starsd
-version: '"0.9.3"'
-commit: a6ecce88b17428836041caf0fff8ada3c15afd00
+version: 0.10.0
+commit: eaa79abdf2942b143362aa15cfc204b4d977270b
 build_tags: netgo,ledger
-go: go version go1.16.3 darwin/amd64
+go: go version go1.16.4 linux/amd64
 ```
 
 If the software version does not match, then please check your `$PATH` to ensure the correct `starsd` is running.
@@ -148,8 +148,8 @@ _NOTE: This can take 10-30 minutes depending on your setup._
 Verify your genesis file was created properly:
 
 ```sh
-./checkgen.sh
-42bf3aa2154bfa33deaa77c3a70d2aac94e382eb847ed3f07dbb71be695cd4d0
+sha256sum ~/.starsd/config/genesis.json
+d5baa2f54fbd4b0c84967e0b8a59bfa26ee5da6230da44f1f13624626cb3e927
 ```
 
 _NOTE: You will need to install [jq](https://stedolan.github.io/jq/download/) if you haven't already for the above to work_.
