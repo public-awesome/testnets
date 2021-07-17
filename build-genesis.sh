@@ -29,8 +29,8 @@ echo "Processing airdrop snapshot..."
 if ! [ -f genesis.json ]; then
     curl -O https://archive.interchain.io/4.0.2/genesis.json
 fi
-starsd export-airdrop-snapshot uatom genesis.json snapshot.json
 starsd init testmoniker --chain-id $CHAIN_ID
+starsd export-airdrop-snapshot uatom genesis.json snapshot.json
 starsd prepare-genesis testnet $CHAIN_ID
 starsd import-genesis-accounts-from-snapshot snapshot.json
 
