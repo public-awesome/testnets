@@ -1,13 +1,13 @@
 #!/bin/bash
-
+set -ex
 DENOM=ustarx
-CHAIN_ID=cygnusx-1a
+CHAIN_ID=cygnusx-1
 GENTXS=cygnusx-1
 ONE_HOUR=3600
 ONE_DAY=$(($ONE_HOUR * 24))
 ONE_YEAR=$(($ONE_DAY * 365))
 VALIDATOR_COINS=1000000000000$DENOM
-REQUIRED_VERSION="0.9.3"
+REQUIRED_VERSION="0.10.0"
 VERSION="$(starsd version |  awk '{print $NF}')"
 if [ "$VERSION" != "$REQUIRED_VERSION" ]; then
     echo "starsd required $REQUIRED_VERSION, current $VERSION"
@@ -29,8 +29,8 @@ echo "Processing airdrop snapshot..."
 if ! [ -f genesis.json ]; then
     curl -O https://archive.interchain.io/4.0.2/genesis.json
 fi
-starsd export-airdrop-snapshot uatom genesis.json snapshot.json
 starsd init testmoniker --chain-id $CHAIN_ID
+starsd export-airdrop-snapshot uatom genesis.json snapshot.json
 starsd prepare-genesis testnet $CHAIN_ID
 starsd import-genesis-accounts-from-snapshot snapshot.json
 
@@ -77,5 +77,8 @@ done
 starsd collect-gentxs
 starsd validate-genesis
 
-cp ~/.starsd/config/genesis.json $GENTXS
-jq -S -f normalize.jq  ~/.starsd/config/genesis.json > $GENTXS/sorted_genesis.json
+cp ~/.starsd/config/genesis.json $GENTXS/pre-built.json
+jq -S -f normalize.jq  ~/.starsd/config/genesis.json > $GENTXS/genesis.json
+cp $GENTXS/genesis.json ~/.starsd/config/genesis.json
+sha256sum $GENTXS/genesis.json
+sha256sum ~/.starsd/config/genesis.json
