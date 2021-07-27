@@ -162,7 +162,7 @@
         "min_deposit": [
           {
             "denom": "ustarx",
-            "amount": "10000000"
+            "amount": "1000000000"
           }
         ],
         "max_deposit_period": "172800s"
@@ -208,7 +208,7 @@
       },
     // stargaze
      "tally_params": {
-        "quorum": "0.100000000000000000",
+        "quorum": "0.200000000000000000",
         "threshold": "0.500000000000000000",
         "veto_threshold": "0.334000000000000000"
       }
@@ -220,8 +220,6 @@
         "clients_metadata": [],
         "params": {
           "allowed_clients": [
-          // hub-4 doesn't have solomachine
-            "06-solomachine",
             "07-tendermint"
           ]
         },
@@ -245,15 +243,9 @@
       }
     },
     "mint": {
-    // default
       "minter": {
-        "inflation": "0.130000000000000000",
+        "inflation": "0.200000000000000000",
         "annual_provisions": "0.000000000000000000"
-      },
-    // hub-4
-      "minter": {
-        "inflation": "0.070019388549844831",
-        "annual_provisions": "18788697751626.180652796031159223"
       },
       // default
       "params": {
@@ -285,15 +277,6 @@
     },
     "params": null,
     "slashing": {
-    // default
-      "params": {
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600s",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
-      },
-    // hub-4
       "params": {
         "signed_blocks_window": "10000",
         "min_signed_per_window": "0.050000000000000000",
@@ -301,40 +284,15 @@
         "slash_fraction_double_sign": "0.050000000000000000",
         "slash_fraction_downtime": "0.000100000000000000"
       },
-     // stargaze
-      "params": {
-        "signed_blocks_window": "30000",
-        "min_signed_per_window": "0.050000000000000000",
-        "downtime_jail_duration": "60s",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.000000000000000000"
-      },
     },
     "staking": {
-    // default
       "params": {
-        "unbonding_time": "604800s",
+        "unbonding_time": "1209600s",
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
         "bond_denom": "ustarx"
-      },
-    // hub-4
-      "params": {
-        "unbonding_time": "1814400s",
-        "max_validators": 125,
-        "max_entries": 7,
-        "historical_entries": 10000,
-        "bond_denom": "uatom",
-      },
-     // stargaze
-      "params": {
-        "unbonding_time": "259200s",
-        "max_validators": 100,
-        "max_entries": 7,
-        "historical_entries": 10000,
-        "bond_denom": "ustarx"
-      },
+      }
     },
     "transfer": {
       "port_id": "transfer",
@@ -363,7 +321,8 @@
         },
         "instantiate_default_permission": "Everybody",
         "max_wasm_code_size": "614400"
-      },
+      }
     }
   }
+}
 }
