@@ -37,7 +37,30 @@
         },
         "balances": [],
         "supply": [],
-        "denom_metadata": []
+        "denom_metadata": [
+          {
+            "base": "ustarx",
+            "denom_units": [
+              {
+                "aliases": ["microstars"],
+                "denom": "ustarx",
+                "exponent": 0
+              },
+              {
+                "aliases": ["millistars"],
+                "denom": "mstars",
+                "exponent": 3
+              },
+              {
+                "aliases": [],
+                "denom": "stars",
+                "exponent": 6
+              }
+            ],
+            "description": "The native staking token of Stargaze",
+            "display": "stars"
+          }
+        ]
       },
       "claim": {
         "module_account_balance": {
