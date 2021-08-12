@@ -168,7 +168,7 @@
             "permission": "Nobody",
             "address": ""
           },
-          "instantiate_default_permission": "Everybody",
+          "instantiate_default_permission": "Nobody",
           "max_wasm_code_size": "614400"
         }
       }
