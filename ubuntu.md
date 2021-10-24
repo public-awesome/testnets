@@ -18,8 +18,8 @@
 ### x86
 
 ```bash
-> wget https://golang.org/dl/go1.15.8.linux-amd64.tar.gz
-> tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
+> wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
+> tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz
 ```
 
 Setup paths in .profile
