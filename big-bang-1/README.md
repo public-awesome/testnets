@@ -92,4 +92,4 @@ go: go version go1.17 linux/amd64
    --from <key-name>
    ```
 
-6. Request tokens from the [Stargaze Discord #faucet channel](https://discord.gg/QeJWCrE) if you need more.
+6. Request tokens from the [Stargaze Discord #faucet channel](https://discord.gg/stargaze) if you need more.
