@@ -1,1 +1,1 @@
-cygnusx-1/README.md
+big-bang-1/README.md
