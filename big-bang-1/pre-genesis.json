@@ -2154,7 +2154,7 @@
       },
       "params": {
         "mint_denom": "stake",
-        "start_time": "2023-02-18T07:48:07.944809930Z",
+        "start_time": "2023-02-18T16:05:46.981302533Z",
         "initial_annual_provisions": "1000000000000000.000000000000000000",
         "reduction_factor": "0.666666666666666666",
         "blocks_per_year": "6311520"

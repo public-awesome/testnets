@@ -36,8 +36,8 @@ It will display the version of starsd currently installed:
 ```sh
 name: stargaze
 server_name: starsd
-version: 3.0.0-alpha
-commit: e6120da46064b058b18d2b2c0ef53eb4eee187e9
+version: 3.0.0-alpha.2
+commit: ba8e715e3c60b44145d4380e3068e2d5a21e8535
 build_tags: netgo,ledger
 go: go version go1.17 linux/amd64
 ```
