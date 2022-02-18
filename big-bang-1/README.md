@@ -61,7 +61,16 @@ go: go version go1.17 linux/amd64
    Fetch `genesis.json` into `starsd`'s `config` directory.
 
    ```sh
-   > curl https://raw.githubusercontent.com/public-awesome/testnets/main/big-bang-1/genesis.json > $HOME/.starsd/config/genesis.json
+   > curl -s  https://raw.githubusercontent.com/public-awesome/testnets/main/big-bang-1/genesis/genesis.tar.gz > genesis.tar.gz
+   > tar -C ~/.starsd/config/ -xvf genesis.tar.gz
+   ```
+
+   **Genesis sha256**
+
+   ```sh
+   jq -S -f normalize.jq  ~/.starsd/config/genesis.json | shasum -a 256
+
+   193cd956fd14b7dc8bd3e07d18cebe6bfc2014b47d8a3228758ea4b26a83f8df  -
    ```
 
 4. Start your node and sync to the latest block
