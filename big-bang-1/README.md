@@ -7,10 +7,10 @@
 
 ## Software requirements
 
-Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-alpha).
+Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-alpha.2).
 
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v3.0.0-alpha](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-alpha)
+- Latest version : [v3.0.0-alpha.2](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-alpha.2)
 
 ### Install Stargaze
 
@@ -19,7 +19,7 @@ Requires [Go version v1.17+](https://golang.org/doc/install).
 ```sh
 > git clone https://github.com/public-awesome/stargaze && cd stargaze
 > git fetch origin --tags
-> git checkout v3.0.0-alpha
+> git checkout v3.0.0-alpha.2
 > make install
 ```
 
