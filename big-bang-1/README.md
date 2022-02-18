@@ -61,7 +61,7 @@ go: go version go1.17 linux/amd64
    Fetch `genesis.json` into `starsd`'s `config` directory.
 
    ```sh
-   > curl -s  https://raw.githubusercontent.com/public-awesome/testnets/main/big-bang-1/genesis/genesis.tar.gz > genesis.tar.gz
+   > curl -s  https://raw.githubusercontent.com/public-awesome/testnets/main/main/genesis/genesis.tar.gz > genesis.tar.gz
    > tar -C ~/.starsd/config/ -xvf genesis.tar.gz
    ```
 
