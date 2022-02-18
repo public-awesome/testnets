@@ -68,9 +68,12 @@ go: go version go1.17 linux/amd64
    **Genesis sha256**
 
    ```sh
-   jq -S -f normalize.jq  ~/.starsd/config/genesis.json | shasum -a 256
+    shasum -a 256 ~/.starsd/config/genesis.json
+    6c559caa706ca37a13a39c05f4688e5c8ece2d9014f11593fc41dcdcb3ba5dda  /home/jhernandez/.starsd/config/genesis.json
 
-   193cd956fd14b7dc8bd3e07d18cebe6bfc2014b47d8a3228758ea4b26a83f8df  -
+    # normalized
+    jq -S -f normalize.jq  ~/.starsd/config/genesis.json | shasum -a 256
+    50aa095cf16c5b03846b96cc44cdf247d63862e2d58e450bfc62926a79390fb4  -
    ```
 
 4. Start your node and sync to the latest block
