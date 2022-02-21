@@ -7,10 +7,10 @@
 
 ## Software requirements
 
-Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-alpha.2).
+Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-beta).
 
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v3.0.0-alpha.2](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-alpha.2)
+- Latest version : [v3.0.0-beta](https://github.com/public-awesome/stargaze/releases/tag/v3.0.0-beta)
 
 ### Install Stargaze
 
@@ -19,7 +19,7 @@ Requires [Go version v1.17+](https://golang.org/doc/install).
 ```sh
 > git clone https://github.com/public-awesome/stargaze && cd stargaze
 > git fetch origin --tags
-> git checkout v3.0.0-alpha.2
+> git checkout v3.0.0-beta
 > make install
 ```
 
@@ -36,8 +36,8 @@ It will display the version of starsd currently installed:
 ```sh
 name: stargaze
 server_name: starsd
-version: 3.0.0-alpha.2
-commit: ba8e715e3c60b44145d4380e3068e2d5a21e8535
+version: 3.0.0-beta
+commit: ec962c91beca198592d0f55bf698e43ba76d9258
 build_tags: netgo,ledger
 go: go version go1.17 linux/amd64
 ```
