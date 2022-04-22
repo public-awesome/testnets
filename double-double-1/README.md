@@ -1,4 +1,4 @@
-# Stargaze Castor Testnet Instructions
+# Stargaze Double Double Instructions
 
 ## Minimum hardware requirements
 
