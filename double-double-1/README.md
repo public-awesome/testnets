@@ -69,7 +69,7 @@ go: go version go1.18 linux/amd64
 
    ```sh
     shasum -a 256 ~/.starsd/config/genesis.json
-    5dcfd536cc562408e4f9ba0ec1d584d2d939f0861f27f45da62cd08925fd9f6d  /home/jhernandez/.starsd/config/genesis.json
+    ea00bb804c30d8bd0e6b98f915c6e63dce4842193bce8410e854215980ed8166  /home/<user>/.starsd/config/genesis.json
    ```
 
 4. Start your node and sync to the latest block
@@ -92,3 +92,9 @@ go: go version go1.18 linux/amd64
    ```
 
 6. Request tokens from the [Stargaze Discord #faucet channel](https://discord.gg/stargaze) if you need more.
+
+## Seed
+
+```
+69666f77b6a2355fcfc64c9879520a352b62917e@45.55.57.176:36658
+```
