@@ -19,7 +19,7 @@ func main() {
 	}
 	fmt.Println("genesis time", date)
 
-	csv_file, _ := os.Open("castor-1/accounts/accounts.csv")
+	csv_file, _ := os.Open("double-double-1/accounts/accounts.csv")
 	r := csv.NewReader(csv_file)
 	denom := "ustars"
 	total := sdk.NewCoin(denom, sdk.ZeroInt())

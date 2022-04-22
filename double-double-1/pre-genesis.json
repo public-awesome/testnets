@@ -1,0 +1,2216 @@
+{
+  "genesis_time": "2022-02-17T17:00:00Z",
+  "chain_id": "double-double-1",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000",
+      "max_bytes": "1048576"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    },
+    "version": {}
+  },
+  "app_hash": "",
+  "app_state": {
+    "alloc": {
+      "params": {
+        "distribution_proportions": {
+          "nft_incentives": "0.450000000000000000",
+          "developer_rewards": "0.150000000000000000"
+        },
+        "weighted_developer_rewards_receivers": []
+      }
+    },
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1qpeu488858wm3uzqfz9e6m76s5jmjjtcuwr8e2",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1fayut6xzyka29zvznsumlgy5pl4vkn4fkmaznc",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars12ymx35lwtdxzqxmjg268hh0sp9cmfu2ujrdw8g",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1azm5fl53am6atwdlffh79zywjj7jhq0nhmzljc",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1x8ekgrl2jzafqz55twd6549ax8v90yr824t0mz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1deufvp35smc5sahr6r6nkkr7qzk33gt5xf2vww",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1yty3zefn0z608qvsgrhp8nyxc0qk766dzzf5m5",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1qz3zj0j3546xywfe8qwcve5flne9w98qhmmmwl",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1qyt99shyjdp6ewyvhyknq6rzqkpkv7hezcg5v2",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1qv2tdjma7dcg6jmgawwd0aajjcx89rqck3v5nm",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1qe8uuf5x69c526h4nzxwv4ltftr73v7q5fnyna",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1pyuerj3r2m3ve7q5287ruwqr5qxlasjcv0hgph",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1pvxxlaq2mxef9xn2v3vpx3ynd48u4avd0jl78j",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1p3ga5uyzl9hum0j5qv0f5vysyevvwc8rdcr54g",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1pjmngrwcsatsuyy8m3qrunaun67sr9x7nuqz8j",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1zvf5cqv4yynk45xcpqp5js04pu58pjhksna7cc",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1rqmmaxkzy3jujgatn2walhnjf92zye7me6uvvj",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1r4sevyvum9ppqlw75t6h0ex9j4j9dzyd0zryq6",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1rkhzx3q59nzmrjrj3lhpazfxaxvm9uxl372f9h",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1ytmeusye99zdzumkx2hvlx5p3fj9d5w8thj6ga",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1yvrw5z5ec0n9c253hpy5lkq9cufmk8dvc8m9df",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1ywfhwv96yl7qlp2v5jj80jf2j533e3j6e6puww",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1y0k86wx0jpfqs9qcq6alalfwvyackwfqa85e40",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1yskcx5zfkr3nacn6f5zd08yw72zwm4s03cnl66",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1y3cxrze7kmktj93atd42g9rffyg823g0tv5dyq",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1yjq59fx4a4ahns9uje8jqvasyaafzxfakyfkgk",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1y58hfnm90r4efhlydx0gavz57lvm7k6uhpzu20",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1yad4khtgn79s7dcdm7lupadlhvhgrwp3v2jwm4",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars19gchtvr4qpj5ch9zk5vd4c6jgd4jrp8c90c3te",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars19fkg84w4mt38dlk90maz7r33eype57zx3mzpu3",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1926sz228mm6yjlwye9hfxxh0hh4nm4aqzl73yx",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars19jw025fpcmayxj4qxp50uh2jvxuff57v95zhhz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars19l869pcwy6d72e5slrqgdg3qs2u9ej3q829p4s",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars19lv4f4rrm5q5s7pt2f50lcq7gr2pd4gjkt6g60",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars19lekr8tjw4ys55gjgq9ymvj38yrt69pzcl2s7z",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1xqum4wt30f3aqw8mmv823ty3x7gpmmdewua8k3",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1xzkpdcphmygtphaxmtjx35wjhgnlsddazgkwuv",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1xru87608vdps23q4s79006lcsm0tfxcl7vgglv",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1xh23t8ula39qfzquxj4eatga7pqpxxumm2fem6",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1xh3l38d0vrd49r2hhutu6p5hgmk99vvyryz62g",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars185dupqc8z7w374r6d5wgqm9cqlr485wzwv55hc",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars18u3wyvmmh2lq008gtwdsqcvj3m22aqyxq0s0xc",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1gp957czryfgyvxwn3tfnyy2f0t9g2p4p336np9",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1gskxy3s99y967v2knmjmgrkfhvk0nfve8xt74p",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1gjtvly9lel6zskvwtvlg5vhwpu9c9waw0c92fy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1g5ggp7zqq6mec2fdz84q8pv6ykrf0lgtgxn60c",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1gkj0nrpw87ndxm5j2e240r3r8247r8xtulkrtj",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1gle9dkjsh9p2hd9skhkqyfvaydsw7vkr30fdzm",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1fyxjddcem0pwqsa7cjpg8e79ezewuxkczygumu",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1f4mjfnx604swljj8pv2923ruf6m38ylkaad8q6",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1fhznrvfyv25f27se8pqw79ytfcwh45j02lswy6",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars12rfj3mvdfeh38p3ztmuhamgm4yxwq8a52uncht",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars12v78y2lrpy2euhuzjtd6ssyzz3zllgs0h7z9gt",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars12j27sg08nccd22gdp55fl8exarwust33a7x4vv",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1tnx3z8ke9za65v32qxhu65mav2282jruvmn3xz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1tnffg6s9x35eac2kaw4zvkx7lvyhd7sp9yr8kp",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1tk057sckr9yf94a0ndn66ye8d9zgn860t966uu",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1vpy82purcj983jx8jt29py7v2eamv9yq7wmd63",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1v8yp5x5kfex4wep2pfuuyw68cn2lst3kmpmutg",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1vd2wr8vm6tqmn9vflue5kf7m9v7ltyye7k6hse",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1vaj7mt7kcrdxvfcl2ye7c2qwuxxmj9a7907wv7",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1d25p7fvtkhwu7ufyslmpsqcepppf5lfw8dhhnc",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1dtk6748uhvmhvakhleclrwprp27pe89vuf6pwe",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1dkuvgapkjf6lmdnh9jm4hy6zm85kvrqsjhlrld",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1wz3692qvg6g3kcnnyta40rn2jj5jfhxqfdl55g",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1wvh8n82r4alqhxs45m8jtf536sqc5nzzrhky97",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1026g52vdndkptqq5f46k9fwatyvzxtr4m7rnyd",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars10wxn2lv29yqnw2uf4jf439kwy5ef00qdyvtgfh",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars10n9npp3y4t9flc92j0swu49qzahkczc4g9nf60",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1swer6tl0s59g82xnq5gmgsdueld79wpwvj4lyy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1s0lankh33kprer2l22nank5rvsuh9ksa20ued7",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1s33zct2zhhaf60x4a90cpe9yquw99jj0qh8pdx",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1s679uyrt0uhljj8ws905hetwn87jqdz3c09zyk",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars13r4kyxcdwd49xekzvlasp23kt67ju85hkzsqnk",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars13htkxk8nw6qwhfdugllp8ldtgt5nm80xzy23vv",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars13curyx4nxhq5q3ge5x2yd54c4df20vusqt0jap",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars13agg47uffkehwqpvqeqp86aamjmkvmt4u6l3ex",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1jp9v48a8u4vndt7m2ueal7v6a248n0sh6yp6u4",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1jxv0u20scum4trha72c7ltfgfqef6nscxkrjl7",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1j8y7wh6hsz0nr9sx7z9qhx4p2hgy58xenpfgre",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1jg39wazpukeqcytuuad7tsn3end22spgp9pg57",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1jnum75gr8jsn4xn9u48kc9ma5c4mrmvzmjfep2",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1jhn0mats4dgy7x9lk4m30yfcx5mkkezukrhzhh",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1j74f2ef2p9ue7tz0jlcg6ejnjhp5evv0966mx5",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1n8m39wjm2n93wxsmmhte5whljtzd9z3hm3dclz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1nspplp7um4psdft5z0eks33l07jkn748m0aqdp",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1n3mhyp9fvcmuu8l0q8qvjy07x0rql8q4tp6zp5",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars15rvwy3m0jmsc2ecgqmnfahvapppaqw3luyfmad",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars15h93mze4d7uzls97pzy58rf9fplxmzya9euewy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars14ysq6pfyxh5jmhddvjhxu6du8nh7r824v63myq",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1487c4zgh9lfgm2tpvenl58832wzsm64ws0j5p3",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars14ftwwcfvhnp3qvxawesjan5duh8rmrkrfnc58u",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1kg99k8wd67r0ffxwavgnxup7yk46rvtthshe4u",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1ksa839vuqehcgytzplsz225n7gmwqvp0pd3t2d",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1k5pyrxxd3usuneeeh4gssqh7sw0f73kvk9lnh4",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1hr4ag3mdzy08rl6r7pga832kvchqctvmfn8dkg",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1h87dt0ecnkphxrk5k5tvkedu7r7h9e6k482zau",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1hvw778wslvyxh6mmv3sy96mwnaw80elmgw6vp0",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1ck2p4qj79lqvsxp3wxpagxxrd98mt8xllguv08",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1e9xd5eggd4l9xynap0mjep3s2uwwxwsyxlyymd",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1e8twhfvncrlrezvmk452sw2rr60ut3qpcnls8x",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1eh397usaczphjk2fjra5590uyx6urp5j8el4rp",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1euk4m0h5j82pdytr6y9gd4umfwredkjzkcaykz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1e7l7l25w3ajzjv400zxx42zrcprgruy9wyqt69",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars16pj5gljqnqs0ajxakccfjhu05yczp987jw0wyy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars16x8thpydgpsfxtzjljqyvtm8a6pkk8gg5yp5cv",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars16g3swraf327anff7eddmfae3yj92rqg0aac2tz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars162ty3nf7wd5tvqhsu486fexh832fyhamyxc4vs",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1mz2qks48v486d9m8wp4l9fxm2e9l0e0kfg23qv",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1mg0qwctfwnq59qsukrqgdtmzp0ky5exfee470k",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1msylh4vxq8uyz6cwcerme3yyq3cjpanphs2763",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1up3r2ha96wktlek3fvjrsnqaglvh09egd9yulk",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1uy96tewdka2dcuaq654q77zzz2uh40vh3ekl56",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1uau0wsngp9rxampkfwg93ztkyju29e48uxuhaw",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1ulvgmlttxhrnmegu57sj0n2qc7xvtrn9ptqxsy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1arn8gtd3j2hutc2jluef48uduf30htay75snjx",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1ah9en7z47gkhe7tfydfwp78z4u5td5y52n5ll4",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars179luvthvww4t0cawrcsv3t7a8amr4n7grwllxy",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars17dn5e2n6w60pzyxeq79apr05r6jzfw7w4nnjc2",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars17d6jxcmqzhhzjgnr5hvd73x25hupp60njkgsnq",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars17skjxhtt54prnpxcs7a5rv9znlldpe5kv48vl4",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars17jtf3gr53ztgjjlcl8vkhvvn0rusthdquuhneq",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars17h2x3j7u44qkrq0sk8ul0r2qr440rwgj8pt804",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "stars1lk6amgdr7u6pf5n3aq302fh9nkh0vduqa50ga9",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      ]
+    },
+    "authz": {
+      "authorization": []
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "stars1qpeu488858wm3uzqfz9e6m76s5jmjjtcuwr8e2",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "500000000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1qz3zj0j3546xywfe8qwcve5flne9w98qhmmmwl",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1qyt99shyjdp6ewyvhyknq6rzqkpkv7hezcg5v2",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1qv2tdjma7dcg6jmgawwd0aajjcx89rqck3v5nm",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1qe8uuf5x69c526h4nzxwv4ltftr73v7q5fnyna",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1pyuerj3r2m3ve7q5287ruwqr5qxlasjcv0hgph",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1pvxxlaq2mxef9xn2v3vpx3ynd48u4avd0jl78j",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1p3ga5uyzl9hum0j5qv0f5vysyevvwc8rdcr54g",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1pjmngrwcsatsuyy8m3qrunaun67sr9x7nuqz8j",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1zvf5cqv4yynk45xcpqp5js04pu58pjhksna7cc",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1rqmmaxkzy3jujgatn2walhnjf92zye7me6uvvj",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1r4sevyvum9ppqlw75t6h0ex9j4j9dzyd0zryq6",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1rkhzx3q59nzmrjrj3lhpazfxaxvm9uxl372f9h",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1yty3zefn0z608qvsgrhp8nyxc0qk766dzzf5m5",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "500000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1ytmeusye99zdzumkx2hvlx5p3fj9d5w8thj6ga",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1yvrw5z5ec0n9c253hpy5lkq9cufmk8dvc8m9df",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1ywfhwv96yl7qlp2v5jj80jf2j533e3j6e6puww",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1y0k86wx0jpfqs9qcq6alalfwvyackwfqa85e40",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1yskcx5zfkr3nacn6f5zd08yw72zwm4s03cnl66",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1y3cxrze7kmktj93atd42g9rffyg823g0tv5dyq",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1yjq59fx4a4ahns9uje8jqvasyaafzxfakyfkgk",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1y58hfnm90r4efhlydx0gavz57lvm7k6uhpzu20",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1yad4khtgn79s7dcdm7lupadlhvhgrwp3v2jwm4",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars19gchtvr4qpj5ch9zk5vd4c6jgd4jrp8c90c3te",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars19fkg84w4mt38dlk90maz7r33eype57zx3mzpu3",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1926sz228mm6yjlwye9hfxxh0hh4nm4aqzl73yx",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars19jw025fpcmayxj4qxp50uh2jvxuff57v95zhhz",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars19l869pcwy6d72e5slrqgdg3qs2u9ej3q829p4s",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars19lv4f4rrm5q5s7pt2f50lcq7gr2pd4gjkt6g60",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars19lekr8tjw4ys55gjgq9ymvj38yrt69pzcl2s7z",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1xqum4wt30f3aqw8mmv823ty3x7gpmmdewua8k3",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1xzkpdcphmygtphaxmtjx35wjhgnlsddazgkwuv",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1xru87608vdps23q4s79006lcsm0tfxcl7vgglv",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1x8ekgrl2jzafqz55twd6549ax8v90yr824t0mz",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "500000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1xh23t8ula39qfzquxj4eatga7pqpxxumm2fem6",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1xh3l38d0vrd49r2hhutu6p5hgmk99vvyryz62g",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars185dupqc8z7w374r6d5wgqm9cqlr485wzwv55hc",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars18u3wyvmmh2lq008gtwdsqcvj3m22aqyxq0s0xc",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1gp957czryfgyvxwn3tfnyy2f0t9g2p4p336np9",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1gskxy3s99y967v2knmjmgrkfhvk0nfve8xt74p",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1gjtvly9lel6zskvwtvlg5vhwpu9c9waw0c92fy",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1g5ggp7zqq6mec2fdz84q8pv6ykrf0lgtgxn60c",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1gkj0nrpw87ndxm5j2e240r3r8247r8xtulkrtj",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1gle9dkjsh9p2hd9skhkqyfvaydsw7vkr30fdzm",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1fyxjddcem0pwqsa7cjpg8e79ezewuxkczygumu",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1f4mjfnx604swljj8pv2923ruf6m38ylkaad8q6",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1fhznrvfyv25f27se8pqw79ytfcwh45j02lswy6",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1fayut6xzyka29zvznsumlgy5pl4vkn4fkmaznc",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "300000000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars12rfj3mvdfeh38p3ztmuhamgm4yxwq8a52uncht",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars12ymx35lwtdxzqxmjg268hh0sp9cmfu2ujrdw8g",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "500000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars12v78y2lrpy2euhuzjtd6ssyzz3zllgs0h7z9gt",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars12j27sg08nccd22gdp55fl8exarwust33a7x4vv",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1tnx3z8ke9za65v32qxhu65mav2282jruvmn3xz",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1tnffg6s9x35eac2kaw4zvkx7lvyhd7sp9yr8kp",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1tk057sckr9yf94a0ndn66ye8d9zgn860t966uu",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1vpy82purcj983jx8jt29py7v2eamv9yq7wmd63",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1v8yp5x5kfex4wep2pfuuyw68cn2lst3kmpmutg",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1vd2wr8vm6tqmn9vflue5kf7m9v7ltyye7k6hse",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1vaj7mt7kcrdxvfcl2ye7c2qwuxxmj9a7907wv7",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1d25p7fvtkhwu7ufyslmpsqcepppf5lfw8dhhnc",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1dtk6748uhvmhvakhleclrwprp27pe89vuf6pwe",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1dkuvgapkjf6lmdnh9jm4hy6zm85kvrqsjhlrld",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1deufvp35smc5sahr6r6nkkr7qzk33gt5xf2vww",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "500000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1wz3692qvg6g3kcnnyta40rn2jj5jfhxqfdl55g",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1wvh8n82r4alqhxs45m8jtf536sqc5nzzrhky97",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1026g52vdndkptqq5f46k9fwatyvzxtr4m7rnyd",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars10wxn2lv29yqnw2uf4jf439kwy5ef00qdyvtgfh",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars10n9npp3y4t9flc92j0swu49qzahkczc4g9nf60",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1swer6tl0s59g82xnq5gmgsdueld79wpwvj4lyy",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1s0lankh33kprer2l22nank5rvsuh9ksa20ued7",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1s33zct2zhhaf60x4a90cpe9yquw99jj0qh8pdx",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1s679uyrt0uhljj8ws905hetwn87jqdz3c09zyk",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars13r4kyxcdwd49xekzvlasp23kt67ju85hkzsqnk",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars13htkxk8nw6qwhfdugllp8ldtgt5nm80xzy23vv",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars13curyx4nxhq5q3ge5x2yd54c4df20vusqt0jap",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars13agg47uffkehwqpvqeqp86aamjmkvmt4u6l3ex",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1jp9v48a8u4vndt7m2ueal7v6a248n0sh6yp6u4",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1jxv0u20scum4trha72c7ltfgfqef6nscxkrjl7",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1j8y7wh6hsz0nr9sx7z9qhx4p2hgy58xenpfgre",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1jg39wazpukeqcytuuad7tsn3end22spgp9pg57",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1jnum75gr8jsn4xn9u48kc9ma5c4mrmvzmjfep2",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1jhn0mats4dgy7x9lk4m30yfcx5mkkezukrhzhh",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1j74f2ef2p9ue7tz0jlcg6ejnjhp5evv0966mx5",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1n8m39wjm2n93wxsmmhte5whljtzd9z3hm3dclz",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1nspplp7um4psdft5z0eks33l07jkn748m0aqdp",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1n3mhyp9fvcmuu8l0q8qvjy07x0rql8q4tp6zp5",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars15rvwy3m0jmsc2ecgqmnfahvapppaqw3luyfmad",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars15h93mze4d7uzls97pzy58rf9fplxmzya9euewy",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars14ysq6pfyxh5jmhddvjhxu6du8nh7r824v63myq",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1487c4zgh9lfgm2tpvenl58832wzsm64ws0j5p3",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars14ftwwcfvhnp3qvxawesjan5duh8rmrkrfnc58u",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1kg99k8wd67r0ffxwavgnxup7yk46rvtthshe4u",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1ksa839vuqehcgytzplsz225n7gmwqvp0pd3t2d",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1k5pyrxxd3usuneeeh4gssqh7sw0f73kvk9lnh4",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1hr4ag3mdzy08rl6r7pga832kvchqctvmfn8dkg",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1h87dt0ecnkphxrk5k5tvkedu7r7h9e6k482zau",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1hvw778wslvyxh6mmv3sy96mwnaw80elmgw6vp0",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1ck2p4qj79lqvsxp3wxpagxxrd98mt8xllguv08",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1e9xd5eggd4l9xynap0mjep3s2uwwxwsyxlyymd",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1e8twhfvncrlrezvmk452sw2rr60ut3qpcnls8x",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1eh397usaczphjk2fjra5590uyx6urp5j8el4rp",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1euk4m0h5j82pdytr6y9gd4umfwredkjzkcaykz",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1e7l7l25w3ajzjv400zxx42zrcprgruy9wyqt69",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars16pj5gljqnqs0ajxakccfjhu05yczp987jw0wyy",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars16x8thpydgpsfxtzjljqyvtm8a6pkk8gg5yp5cv",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars16g3swraf327anff7eddmfae3yj92rqg0aac2tz",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars162ty3nf7wd5tvqhsu486fexh832fyhamyxc4vs",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1mz2qks48v486d9m8wp4l9fxm2e9l0e0kfg23qv",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1mg0qwctfwnq59qsukrqgdtmzp0ky5exfee470k",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1msylh4vxq8uyz6cwcerme3yyq3cjpanphs2763",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1up3r2ha96wktlek3fvjrsnqaglvh09egd9yulk",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1uy96tewdka2dcuaq654q77zzz2uh40vh3ekl56",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1uau0wsngp9rxampkfwg93ztkyju29e48uxuhaw",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1ulvgmlttxhrnmegu57sj0n2qc7xvtrn9ptqxsy",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1azm5fl53am6atwdlffh79zywjj7jhq0nhmzljc",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "500000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1arn8gtd3j2hutc2jluef48uduf30htay75snjx",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1ah9en7z47gkhe7tfydfwp78z4u5td5y52n5ll4",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars179luvthvww4t0cawrcsv3t7a8amr4n7grwllxy",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars17dn5e2n6w60pzyxeq79apr05r6jzfw7w4nnjc2",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars17d6jxcmqzhhzjgnr5hvd73x25hupp60njkgsnq",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars17skjxhtt54prnpxcs7a5rv9znlldpe5kv48vl4",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars17jtf3gr53ztgjjlcl8vkhvvn0rusthdquuhneq",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars17h2x3j7u44qkrq0sk8ul0r2qr440rwgj8pt804",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        },
+        {
+          "address": "stars1lk6amgdr7u6pf5n3aq302fh9nkh0vduqa50ga9",
+          "coins": [
+            {
+              "denom": "ustars",
+              "amount": "10000000000"
+            }
+          ]
+        }
+      ],
+      "supply": [],
+      "denom_metadata": []
+    },
+    "capability": {
+      "index": "1",
+      "owners": []
+    },
+    "claim": {
+      "module_account_balance": {
+        "denom": "ustars",
+        "amount": "0"
+      },
+      "params": {
+        "airdrop_enabled": true,
+        "airdrop_start_time": "0001-01-01T00:00:00Z",
+        "duration_until_decay": "3600s",
+        "duration_of_decay": "18000s",
+        "claim_denom": "ustars",
+        "allowed_claimers": []
+      },
+      "claim_records": []
+    },
+    "crisis": {
+      "constant_fee": {
+        "denom": "stake",
+        "amount": "1000"
+      }
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.020000000000000000",
+        "base_proposer_reward": "0.010000000000000000",
+        "bonus_proposer_reward": "0.040000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "feegrant": {
+      "allowances": []
+    },
+    "genutil": {
+      "gen_txs": []
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": [],
+      "votes": [],
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "stake",
+            "amount": "10000000"
+          }
+        ],
+        "max_deposit_period": "172800s"
+      },
+      "voting_params": {
+        "voting_period": "172800s"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto_threshold": "0.334000000000000000"
+      }
+    },
+    "ibc": {
+      "client_genesis": {
+        "clients": [],
+        "clients_consensus": [],
+        "clients_metadata": [],
+        "params": {
+          "allowed_clients": [
+            "06-solomachine",
+            "07-tendermint"
+          ]
+        },
+        "create_localhost": false,
+        "next_client_sequence": "0"
+      },
+      "connection_genesis": {
+        "connections": [],
+        "client_connection_paths": [],
+        "next_connection_sequence": "0",
+        "params": {
+          "max_expected_time_per_block": "30000000000"
+        }
+      },
+      "channel_genesis": {
+        "channels": [],
+        "acknowledgements": [],
+        "commitments": [],
+        "receipts": [],
+        "send_sequences": [],
+        "recv_sequences": [],
+        "ack_sequences": [],
+        "next_channel_sequence": "0"
+      }
+    },
+    "mint": {
+      "minter": {
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "stake",
+        "start_time": "2023-04-22T22:52:30.158723694Z",
+        "initial_annual_provisions": "1000000000000000.000000000000000000",
+        "reduction_factor": "0.666666666666666666",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "params": null,
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600s",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1814400s",
+        "max_validators": 100,
+        "max_entries": 7,
+        "historical_entries": 10000,
+        "bond_denom": "stake"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "validators": [],
+      "delegations": [],
+      "unbonding_delegations": [],
+      "redelegations": [],
+      "exported": false
+    },
+    "transfer": {
+      "port_id": "transfer",
+      "denom_traces": [],
+      "params": {
+        "send_enabled": true,
+        "receive_enabled": true
+      }
+    },
+    "upgrade": {},
+    "vesting": {},
+    "wasm": {
+      "params": {
+        "code_upload_access": {
+          "permission": "Everybody",
+          "address": ""
+        },
+        "instantiate_default_permission": "Everybody",
+        "max_wasm_code_size": "1228800"
+      },
+      "codes": [],
+      "contracts": [],
+      "sequences": [],
+      "gen_msgs": []
+    }
+  }
+}
