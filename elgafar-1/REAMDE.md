@@ -7,10 +7,10 @@
 
 ## Software requirements
 
-Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v4.0.0).
+Stargaze has releases for Linux [here](https://github.com/public-awesome/stargaze/releases/tag/v6.0.0).
 
 - [Ubuntu Setup Guide](./ubuntu.md)
-- Latest version : [v6.0.0](https://github.com/public-awesome/stargaze/releases/tag/v4.0.0)
+- Latest version : [v6.0.0](https://github.com/public-awesome/stargaze/releases/tag/v6.0.0)
 
 ### Install Stargaze
 
