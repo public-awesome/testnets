@@ -2,3 +2,5 @@
 tmp/
 snapshots/
 snapshot.json
+*/node*/**
+cosmos-discord-faucet/
