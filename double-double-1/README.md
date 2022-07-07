@@ -1,4 +1,4 @@
-# Stargaze Double Double Instructions
+# Stargaze Double Double Testnet Instructions
 
 ## Minimum hardware requirements
 
