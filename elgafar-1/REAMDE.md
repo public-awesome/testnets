@@ -1,4 +1,4 @@
-# Stargaze Double Double Instructions
+# Stargaze Elgafar Tesnet Instructions
 
 ## Minimum hardware requirements
 
@@ -98,3 +98,8 @@ go: go version go1.18 linux/amd64
 ```
 e31886cba90a06e165b0df18cc5c8ae015ecd23e@209.159.152.82:26656,de00d2d65594b672469ecd65826a94ec1be80b9f@208.73.205.226:26656
 ```
+
+## Endpoints
+
+- https://rpc.elgarfar-1.stargaze-apis.com
+- https://rest.elgarfar-1.stargaze-apis.com
