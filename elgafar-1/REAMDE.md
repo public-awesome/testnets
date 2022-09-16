@@ -104,5 +104,5 @@ de00d2d65594b672469ecd65826a94ec1be80b9f@208.73.205.226:26656
 
 ## Endpoints
 
-- https://rpc.elgarfar-1.stargaze-apis.com
-- https://rest.elgarfar-1.stargaze-apis.com
+- https://rpc.elgafar-1.stargaze-apis.com
+- https://rest.elgafar-1.stargaze-apis.com
